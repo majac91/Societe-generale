@@ -1,0 +1,99 @@
+.topnav {
+  height: 53px;
+  background-color: var(--color-light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__links,
+  &__info,
+  &__contact {
+    display: flex;
+    font-size: var(--text-xs);
+  }
+
+  &__links {
+    width: 290px;
+  }
+
+  &__info {
+    float: left;
+    text-transform: uppercase;
+  }
+
+  &__item-wrapper {
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-right: var(--space-md);
+  }
+  &__item {
+    font-size: var(--text-xs);
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+  margin-top: var(--space-md);
+  &__logo {
+    width: 290px;
+    &-img {
+      max-width: 246px;
+      height: auto;
+      float: right;
+    }
+  }
+  &__links {
+    display: flex;
+    position: relative;
+  }
+  &__link {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: white;
+    background: transparent;
+    border: none;
+    margin: 0 var(--space-md);
+    &-drowpodn-icon {
+      margin-left: var(--space-sm);
+    }
+  }
+  &__btns {
+    display: flex;
+    align-items: center;
+    &-btn {
+      margin-right: var(--space-lg);
+    }
+  }
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background: white;
+  &--open {
+    margin-top: var(--space-md);
+    border-top: 3px solid var(--color-red);
+    display: block;
+  }
+  &__heading {
+    text-transform: uppercase;
+    font-size: var(--text-sm);
+    margin: var(--space-md);
+    padding-top: var(--space-sm);
+  }
+  &__link {
+    font-size: var(--text-sm);
+    color: var(--color-text);
+  }
+  &__item {
+    margin: var(--space-md);
+  }
+}
+
+.nav__search {
+  background: blue;
+}
