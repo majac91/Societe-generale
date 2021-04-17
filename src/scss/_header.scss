@@ -1,11 +1,54 @@
 .header {
-  background-image: url("../img/Layer -1@2x.jpg");
-  background-position: center;
-  background-size: cover;
   height: 100vh;
   width: 100vw;
   position: absolute;
   right: 0;
   top: 0;
   z-index: -1;
+  &__slide {
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    &--slide1 {
+      background-image: url("../img/Layer -1@2x.jpg");
+    }
+    &--slide2 {
+      background-image: url("../img/otp-slajder-1440x855px-1.jpeg");
+    }
+    &--slide3 {
+      background-image: url("../img/otp_kdk_cover.jpeg");
+    }
+  }
+}
+
+//Slick slider custom styles
+.slick-arrow.slick-prev,
+.slick-arrow.slick-prev:hover,
+.slick-arrow.slick-prev:focus,
+.slick-arrow.slick-next,
+.slick-arrow.slick-next:hover,
+.slick-arrow.slick-next:focus {
+  height: 2.5rem;
+  width: 1.5rem;
+  background-image: url("../icons/arrow left.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 500;
+  top: 40%;
+  margin: 5rem;
+}
+
+.slick-arrow.slick-prev {
+  background-image: url("../icons/arrow left.png");
+}
+
+.slick-arrow.slick-next {
+  transform: rotate(-180deg);
+}
+
+.slick-arrow.slick-prev::before,
+.slick-arrow.slick-next::before {
+  content: "";
+  font-family: Helvetica;
 }
