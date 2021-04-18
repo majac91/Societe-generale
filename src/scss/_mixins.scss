@@ -1,0 +1,27 @@
+@mixin btn-rounded--red {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  background: red;
+  color: white;
+  height: 45px;
+  width: 223px;
+  border-color: transparent;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin btn-rounded--white {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: red;
+  background: white;
+  height: 45px;
+  width: 223px;
+  border-color: transparent;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
