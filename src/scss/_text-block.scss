@@ -1,17 +1,31 @@
 .text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
-  height: 100%;
   max-width: 100%;
+  padding: var(--space-lg);
+  padding-bottom: var(--space-md);
+  &__heading {
+    font-size: var(--text-md);
+  }
   &__p {
     line-height: 1.5;
-    padding: var(--space-md) 0;
+    padding: var(--space-lg) 0;
+  }
+  &__link {
+    color: var(--color-red);
+    font-weight: 600;
+    width: 100%;
+    &-icon {
+      margin-left: var(--space-sm);
+    }
   }
 }
 
 .hero {
+  justify-content: center;
+  height: 100%;
   max-width: 540px;
   &__heading {
     font-size: var(--text-xxl);
@@ -21,4 +35,9 @@
     font-size: var(--text-sm);
     color: white;
   }
+}
+
+.e-banking .text__heading,
+.e-banking .text__p {
+  color: white;
 }
