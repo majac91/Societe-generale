@@ -48,7 +48,7 @@ const Nav = () => {
               </a>
             </li>
           </ul>
-          <div className="topnav__info container-sm">
+          <div className="topnav__info container-xs">
             <div className="topnav__item-wrapper">
               <LocationIcon className="btn__icon" />
               <p className="topnav__item">Lokacija</p>
@@ -69,7 +69,7 @@ const Nav = () => {
         <a className="nav__logo" href="">
           <img src={logo} className="nav__logo-img" alt="" />
         </a>
-        <ul className="nav__links container-sm">
+        <ul className="nav__links container-xs">
           {/* DROPDOWN */}
           <li className="nav__item">
             <button className="nav__link" onClick={toggleDrowdown}>
@@ -152,7 +152,7 @@ const Nav = () => {
         <div className="nav__btns">
           <div className="nav__btns-btn">
             <Button
-              className="btn__rounded"
+              className="btn__rounded--red"
               txt="Online banking"
               Icon={ArrowIcon}
             ></Button>

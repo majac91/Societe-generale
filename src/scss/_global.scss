@@ -8,7 +8,6 @@
 
 :root {
   /* typography */
-  /* typography base values */
   --text-base-size: 1em;
   --text-scale-ratio: 1.5;
 
@@ -41,7 +40,7 @@
   --color-headings: black;
   --color-red: #e40029;
   --color-light-gray: #f1f2f3;
-  --color-dark-gray: #9b9b9c;
+  --color-dark-gray: #9f9f9f;
 
   /* borders */
   --border-gray: 1px solid #dddedf;
@@ -70,17 +69,26 @@ li {
 }
 
 .container-md {
-  width: 85vw;
+  width: 80vw;
   margin: auto;
 }
 
 .container-sm {
+  width: 70vw;
+  margin: auto;
+}
+
+.container-xs {
   width: 50vw;
   margin: auto;
 }
 
-.btn__rounded {
-  @include btn-rounded;
+.btn__rounded--red {
+  @include btn-rounded--red;
+}
+
+.btn__rounded--white {
+  @include btn-rounded--white;
 }
 
 .btn__icon {

@@ -1,10 +1,13 @@
 import React from "react";
+import { ReactComponent as ArrowIcon } from "../../SVG/00 General icons/CTA arrow.svg";
 
-const Button = ({ txt, Icon, className }) => {
+const Button = ({ txt, className }) => {
   return (
     <button className={className}>
       {txt}
-      {Icon && <Icon className="btn__icon"></Icon>}
+      {className === "btn__rounded--white" && (
+        <ArrowIcon className="btn__icon"></ArrowIcon>
+      )}
     </button>
   );
 };
