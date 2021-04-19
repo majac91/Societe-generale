@@ -1,0 +1,27 @@
+.magazin {
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-lg);
+  }
+  &__card {
+    max-width: 356px;
+    .text__p {
+      min-height: 200px;
+    }
+    &-subheading {
+      font-weight: 600;
+    }
+    &-img {
+      padding: var(--space-sm) 0 var(--space-md);
+    }
+    &-img1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &-icon {
+        position: absolute;
+      }
+    }
+  }
+}

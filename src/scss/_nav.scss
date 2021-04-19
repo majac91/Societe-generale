@@ -29,6 +29,9 @@
     display: flex;
     justify-content: flex-start;
     margin-right: var(--space-md);
+    &:nth-child(1) > svg:nth-child(1) {
+      margin-left: 0;
+    }
   }
   &__item {
     font-size: var(--text-xs);

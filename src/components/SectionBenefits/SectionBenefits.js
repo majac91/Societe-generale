@@ -3,19 +3,14 @@ import { ReactComponent as CashIcon } from "../../SVG/03 Benefits/kes kred.svg";
 import { ReactComponent as InsuranceIcon } from "../../SVG/03 Benefits/osiguranje.svg";
 import { ReactComponent as RefIcon } from "../../SVG/03 Benefits/ref.svg";
 import { ReactComponent as StamIcon } from "../../SVG/03 Benefits/stam.svg";
-
+import Heading from "../Heading/Heading";
 const SectionBenefits = () => {
   return (
     <section className="benefits container-md">
-      <div className="benefits__heading">
-        <h2 className="benefits__heading-caption">
-          Izdvojili smo za vas još vrlo korisnih ponuda
-        </h2>
-        <p className="benefits__heading-p">
-          Nudimo vam spektar proizvoda i usluga koje život čine kvalitetnijim i
-          jednostavnijim
-        </p>
-      </div>
+      <Heading
+        heading="Izdvojili smo za vas još vrlo korisnih ponuda"
+        p="Nudimo vam spektar proizvoda i usluga koje život čine kvalitetnijim i jednostavnijim"
+      ></Heading>
       <div className="benefits__cards">
         <a className="benefits__card">
           <i className="benefits__card-icon">
@@ -37,7 +32,7 @@ const SectionBenefits = () => {
         </a>
         <a className="benefits__card">
           <i className="benefits__card-icon">
-            <RefIcon></RefIcon>
+            <StamIcon></StamIcon>
           </i>
           <h3 className="benefits__card-heading">Stambeni krediti</h3>
           <p className="benefits__card-p">

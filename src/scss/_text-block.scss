@@ -4,19 +4,20 @@
   justify-content: flex-start;
   align-items: flex-start;
   max-width: 100%;
-  padding: var(--space-lg);
+  min-height: 226px;
   padding-bottom: var(--space-md);
   &__heading {
     font-size: var(--text-md);
   }
   &__p {
     line-height: 1.5;
-    padding: var(--space-lg) 0;
+    padding: var(--space-md) 0;
   }
   &__link {
     color: var(--color-red);
     font-weight: 600;
     width: 100%;
+    margin-top: auto;
     &-icon {
       margin-left: var(--space-sm);
     }
@@ -35,9 +36,4 @@
     font-size: var(--text-sm);
     color: white;
   }
-}
-
-.e-banking .text__heading,
-.e-banking .text__p {
-  color: white;
 }

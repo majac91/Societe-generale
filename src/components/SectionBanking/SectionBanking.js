@@ -38,7 +38,7 @@ const SectionBanking = () => {
 
   return (
     <>
-      <section className="banking e-banking">
+      <section className="banking m-banking">
         <div className="banking__inner container-md">
           <div className="banking__img">
             <img className="banking__img-img" src={video} />

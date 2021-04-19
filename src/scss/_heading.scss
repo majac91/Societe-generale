@@ -1,0 +1,14 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  &-caption {
+    margin-top: var(--space-lg);
+  }
+  &-p {
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+}

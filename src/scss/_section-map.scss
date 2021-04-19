@@ -1,0 +1,26 @@
+.map {
+  display: flex;
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 327px;
+    &-heading {
+      color: white;
+      margin-bottom: var(--space-md);
+      font-size: var(--text-xl);
+    }
+    &-card1 {
+      background: url("../img/mapa ekspozitura.jpg");
+    }
+    &-card2 {
+      background: url("../img/online ekspozitura slika@2x.jpg");
+    }
+    &-card2 {
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
