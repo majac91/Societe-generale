@@ -5,7 +5,7 @@ import SectionMeeting from "./components/SectionMeeting/SectionMeeting";
 import SectionBenefits from "./components/SectionBenefits/SectionBenefits";
 import SectionBanking from "./components/SectionBanking/SectionBanking";
 import SectionMagazin from "./components/SectionMagazin/SectionMagazin";
-
+import Form from "./components/Form/Form";
 import SectionMap from "./components/SectionMap/SectionMap";
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <SectionBenefits></SectionBenefits>
         <SectionBanking></SectionBanking>
         <SectionMagazin></SectionMagazin>
-
+        <Form></Form>
         <SectionMap></SectionMap>
       </main>
     </>
