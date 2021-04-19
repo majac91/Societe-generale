@@ -44,9 +44,10 @@ body {
   --color-red: #e40029;
   --color-light-gray: #f7f7f7;
   --color-dark-gray: #9f9f9f;
+  --color-border: #d9d9d9;
 
   /* borders */
-  --border-gray: 1px solid #d9d9d9;
+  --border-gray: 1px solid var(--color-border);
 }
 
 h2,

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Heading from "../Heading/Heading";
+import Button from "../Button/Button";
+import { ReactComponent as Check } from "../../SVG/05 Ebanking primer/check.svg";
 
 const Form = () => {
   const [charCount, setCharCount] = useState({ input: 0, textarea: 0 });
@@ -21,14 +23,15 @@ const Form = () => {
   }
 
   return (
-    <section className="form container-sm">
+    <section className="form container-xs">
       <Heading
         heading="Imate pitanja za nas?"
         p="Razgovarajte sa nama! Pitajte, sugerišite, recite šta mislite, preporučite - odgovor će vas vrlo brzo sačekati u vašem inboksu."
       ></Heading>
+
       <form className="form">
         <label className="form__label" htmlFor="email">
-          Name
+          Upišite svoju email adresu
         </label>
         <input
           className="form__input"
@@ -47,10 +50,10 @@ const Form = () => {
         </div>
 
         <label className="form__label" htmlFor="email">
-          Name
+          Postavite nam pitanje ili kratko opišite svoju sugestiju
         </label>
         <textarea
-          className="form__input"
+          className="form__input textarea"
           id="name"
           onChange={(e) => handleCharCount("textarea", 350, e)}
         ></textarea>
@@ -67,6 +70,20 @@ const Form = () => {
           </span>
         </div>
       </form>
+
+      <div className="form__footer">
+        <div className="form__footer-checkbox">
+          <input id="checkbox" type="checkbox"></input>
+          <span className="check">
+            <Check></Check>
+          </span>
+        </div>
+        <label className="form__footer-checkbox-label" for="check">
+          Želite da čujete korisne savete i budete u toku?
+        </label>
+
+        <Button txt="Pošalji" className="btn__square--red"></Button>
+      </div>
     </section>
   );
 };
