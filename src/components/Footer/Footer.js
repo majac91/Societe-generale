@@ -88,7 +88,10 @@ const Footer = () => {
         </div>
 
         <div className="footer__section3">
-          <button className="footer__section3__button">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="footer__section3__button"
+          >
             <span className="footer__section3__button-icon">
               <ArrowIcon></ArrowIcon>
             </span>
@@ -97,6 +100,38 @@ const Footer = () => {
             </span>
           </button>
           <img className="footer__section3-img" src={phone}></img>
+        </div>
+        <div className="footer__bottom">
+          <ul className="footer__bottom-list">
+            <li className="footer__bottom-item">
+              <a className="footer__bottom-link">PRAVNA REGULATIVA</a>
+            </li>
+            <li className="footer__bottom-item">
+              <a className="footer__bottom-link">UGOVOR O OSNIVANJU</a>
+            </li>
+            <li className="footer__bottom-item">
+              <a className="footer__bottom-link">STATUT BANKE</a>
+            </li>
+            <li className="footer__bottom-item">
+              <a className="footer__bottom-link">DEVIZNI HEDŽING</a>
+            </li>
+            <li className="footer__bottom-item">
+              <a className="footer__bottom-link">TVOJ NOVAC</a>
+            </li>
+            <li className="footer__bottom-item">
+              <a className="footer__bottom-link">
+                KODEKS PROFESIONALNOG PONAŠANJA
+              </a>
+            </li>
+            <li className="footer__bottom-item">
+              <a className="footer__bottom-link">© SGBS 2017</a>
+            </li>
+          </ul>
+          <div className="footer__bottom-lang">
+            <button className="footer__bottom-lang-btn">ENG</button>
+            <span>|</span>
+            <button className="footer__bottom-lang-btn">SRB</button>
+          </div>
         </div>
       </div>
     </footer>
