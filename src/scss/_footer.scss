@@ -9,15 +9,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include respond(mobile) {
+      flex-direction: column;
+    }
   }
 
-  &__section3 {
-    flex: 1;
-  }
   &__section1,
   &__section2 {
     flex: 1.5;
   }
+  &__section3 {
+    flex: 1;
+  }
+
   &__section1 {
     height: 528px;
     width: 516px;
@@ -35,6 +39,9 @@
     .block1 {
       display: flex;
       margin-bottom: var(--space-lg);
+      @include respond(mobile) {
+        flex-direction: column;
+      }
       &__col {
         width: 50%;
       }
@@ -44,6 +51,9 @@
       height: 68px;
       display: flex;
       flex-direction: column;
+      @include respond(mobile) {
+        flex-direction: initial;
+      }
       &__social {
         display: flex;
         &-item {
@@ -66,6 +76,10 @@
       height: 33px;
       margin-top: 4rem;
       margin-left: 9rem;
+      @include respond(mobile) {
+        margin: var(--space-lg) 0;
+        margin-left: 0;
+      }
       .store1 {
         background-image: url("../img/store1.png");
       }
@@ -87,6 +101,11 @@
     }
   }
   &__section3 {
+    @include respond(mobile) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     &__button {
       border: none;
       background: white;
@@ -95,6 +114,9 @@
       position: relative;
       top: -7.5rem;
       left: 9rem;
+      @include respond(mobile) {
+        display: none;
+      }
       &-icon {
         background: white;
         opacity: 0.9;
@@ -127,10 +149,20 @@
     bottom: -5rem;
     background: white;
     border-top: var(--border-gray);
-
+    @include respond(mobile) {
+      bottom: -22.5rem;
+      flex-direction: column;
+      height: 316px;
+      padding-top: var(--space-lg);
+      border: none;
+    }
     &-list {
       display: flex;
       font-size: var(--text-sm);
+      @include respond(mobile) {
+        height: 100%;
+        flex-direction: column;
+      }
     }
     &-item {
       margin-right: var(--space-lg);
@@ -140,6 +172,16 @@
       background: white;
       margin: 0 var(--space-sm);
       font-size: var(--text-sm);
+    }
+  }
+
+  &__section1,
+  &__section2,
+  &__section3 {
+    @include respond(mobile) {
+      width: 100%;
+      padding-left: 0;
+      @include container-md;
     }
   }
 }

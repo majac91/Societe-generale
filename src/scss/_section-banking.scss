@@ -4,12 +4,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  &.mobile {
+    display: none;
+  }
   &__inner {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    @include respond(mobile) {
+      flex-direction: column;
+    }
   }
   &__img {
     width: 100%;
@@ -66,4 +72,16 @@
 
 .banking__txt:nth-child(2) > div:nth-child(1) {
   margin-left: var(--space-xl);
+}
+
+.m-banking.desktop {
+  @include respond(mobile) {
+    display: none;
+  }
+}
+
+.m-banking.mobile {
+  @include respond(mobile) {
+    display: block;
+  }
 }

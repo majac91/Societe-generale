@@ -3,6 +3,9 @@
     display: flex;
     justify-content: space-between;
     margin-top: var(--space-lg);
+    @include respond(mobile) {
+      flex-direction: column;
+    }
   }
   &__card {
     max-width: 356px;

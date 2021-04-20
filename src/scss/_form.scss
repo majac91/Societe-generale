@@ -5,6 +5,9 @@
 .form {
   display: flex;
   flex-direction: column;
+  @include respond(mobile) {
+    @include container-md;
+  }
 
   &__input {
     border-width: 0 0 2px 0;
@@ -31,9 +34,19 @@
     margin-top: var(--space-md);
     .btn__square--red {
       margin-left: auto;
+      @include respond(mobile) {
+        display: none;
+      }
     }
     &-checkbox {
       margin-right: var(--space-sm);
+    }
+  }
+  .btn__square--red.mobile {
+    display: none;
+    @include respond(mobile) {
+      display: block;
+      margin: auto;
     }
   }
 }

@@ -82,8 +82,9 @@ const Form = () => {
           Želite da čujete korisne savete i budete u toku?
         </label>
 
-        <Button txt="Pošalji" className="btn__square--red"></Button>
+        <Button txt="Pošalji" className="btn__square--red desktop"></Button>
       </div>
+      <Button txt="Pošalji" className="btn__square--red mobile"></Button>
     </section>
   );
 };

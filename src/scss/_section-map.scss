@@ -1,5 +1,8 @@
 .map {
   display: flex;
+  @include respond(mobile) {
+    flex-direction: column;
+  }
   &__card {
     display: flex;
     justify-content: center;
@@ -7,6 +10,9 @@
     flex-direction: column;
     width: 50%;
     height: 327px;
+    @include respond(mobile) {
+      width: 100%;
+    }
     &-heading {
       color: white;
       margin-bottom: var(--space-md);

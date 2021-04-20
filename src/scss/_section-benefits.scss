@@ -4,11 +4,16 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  &.mobile {
+    display: none;
+  }
+  //desktop
   &__cards {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: var(--space-lg);
+    flex-wrap: wrap;
   }
   &__card {
     max-width: 240px;
@@ -31,5 +36,40 @@
     &-p {
       padding: var(--space-md);
     }
+  }
+  //mobile
+  &__mobile {
+    width: 100%;
+    &-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--color-light-gray);
+      border-top: var(--border-gray);
+      cursor: pointer;
+      &-heading {
+        flex: 4;
+        text-align: left;
+      }
+      &-icon {
+        flex: 1;
+      }
+      &-heading,
+      &-icon {
+        padding: var(--space-sm);
+      }
+    }
+  }
+}
+
+.benefits.desktop {
+  @include respond(mobile) {
+    display: none;
+  }
+}
+
+.benefits.mobile {
+  @include respond(mobile) {
+    display: block;
   }
 }
