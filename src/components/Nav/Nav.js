@@ -24,7 +24,7 @@ const Nav = () => {
   return (
     <>
       <div className="topnav">
-        <div className="topnav container-lg">
+        <div className="topnav__container container-lg">
           <ul className="topnav__links">
             <li className="topnav__item">Budimo u kontaktu</li>
             <li className="topnav__item">

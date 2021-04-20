@@ -1,0 +1,38 @@
+.meeting {
+  display: flex;
+  justify-content: center;
+  min-height: 546px;
+  flex-wrap: wrap;
+  @include respond(mobile) {
+    height: 100%;
+  }
+  &__card {
+    border: var(--border-gray);
+    margin: var(--space-md);
+    background: var(--color-light-gray);
+    height: 100%;
+    width: 481px;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  &__text-block {
+    flex: 1;
+    padding: var(--space-lg) var(--space-lg) var(--space-sm);
+  }
+  &__footer {
+    background: white;
+    height: 100%;
+    flex: 1;
+    padding: var(--space-lg);
+    &-p {
+      padding-top: var(--space-md);
+      padding-bottom: var(--space-lg);
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+  }
+}
