@@ -43,6 +43,7 @@
   opacity: 0;
   width: 18px;
   height: 18px;
+  cursor: pointer;
 }
 
 #checkbox + .check {
@@ -51,7 +52,6 @@
   width: 18px;
   height: 18px;
   border-radius: 3.4px;
-  cursor: pointer;
 }
 
 #checkbox + .check svg {

@@ -8,6 +8,7 @@ import SectionMagazin from "./components/SectionMagazin/SectionMagazin";
 import Form from "./components/Form/Form";
 import Example from "./components/Example/Example";
 import SectionMap from "./components/SectionMap/SectionMap";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Example></Example>
         <SectionMap></SectionMap>
       </main>
+      <Footer></Footer>
     </>
   );
 }
