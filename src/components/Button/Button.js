@@ -5,6 +5,7 @@ const Button = ({ txt, className }) => {
   return (
     <button className={className}>
       {txt}
+
       {className === "btn__rounded--white" && (
         <ArrowIcon className="btn__icon"></ArrowIcon>
       )}
