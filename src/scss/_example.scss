@@ -1,5 +1,8 @@
 .example__container {
   margin: var(--space-xl) auto;
+  @include respond(mobile) {
+    width: 100%;
+  }
 }
 
 .example {
@@ -13,7 +16,12 @@
     background: inherit;
     border-width: 1px 0 0 0;
     border-color: var(--color-border);
-    font-size: var(--text-md);
+    font-size: 20px;
+    @include respond(mobile) {
+      @include container-lg;
+      display: flex;
+      padding: var(--space-sm);
+    }
     &-icon {
       position: absolute;
       right: 0;
@@ -29,6 +37,11 @@
       margin: auto;
       text-align: center;
       padding: var(--space-lg) 0;
+      &-title {
+        font-size: 19px;
+        font-weight: 600;
+        color: var(--color-text);
+      }
     }
     &__table {
       width: auto;
@@ -47,6 +60,9 @@
       right: 0;
       bottom: 0;
       margin: var(--space-lg) 0 var(--space-md);
+      display: flex;
+      align-items: center;
+      font-size: var(--text-sm);
     }
     &-icon {
       margin-left: var(--space-sm);
@@ -55,9 +71,11 @@
 }
 
 .table {
-  width: 90%;
-  margin: auto;
   border-collapse: collapse;
+  @include container-xxs;
+  @include respond(mobile) {
+    @include container-lg;
+  }
   &__row,
   &__caption,
   &__footer {
@@ -71,7 +89,10 @@
     }
     &-heading,
     &-data {
-      font-size: var(--text-md);
+      font-size: 17px;
+      @include respond(mobile) {
+        font-size: 14px;
+      }
     }
     &-heading {
       text-align: left;

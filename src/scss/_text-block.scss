@@ -7,11 +7,15 @@
   min-height: 226px;
   padding-bottom: var(--space-md);
   &__heading {
-    font-size: var(--text-md);
+    font-size: var(--text-lg);
+    @include respond(mobile) {
+      font-size: 22px;
+    }
   }
   &__p {
     line-height: 1.5;
     padding: var(--space-md) 0;
+    font-size: var(--text-sm);
   }
   &__link {
     color: var(--color-red);
@@ -33,9 +37,43 @@
   &__heading {
     font-size: var(--text-xxl);
     color: white;
+    @include respond(mobile) {
+      font-size: 34px;
+    }
   }
   &__p {
     font-size: var(--text-sm);
     color: white;
+    @include respond(mobile) {
+      font-size: 15px;
+    }
+  }
+}
+
+.meeting {
+  .text__heading {
+    font-size: var(--text-md);
+  }
+}
+
+.magazin {
+  .text {
+    @include respond(mobile) {
+      min-height: 100%;
+      margin-bottom: var(--space-md);
+    }
+  }
+  .text__link {
+    @include respond(mobile) {
+      padding-top: var(--space-md);
+    }
+  }
+  .text__heading {
+    font-size: var(--text-md);
+  }
+  .text__p {
+    @include respond(mobile) {
+      display: none;
+    }
   }
 }

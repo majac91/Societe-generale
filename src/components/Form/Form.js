@@ -23,7 +23,7 @@ const Form = () => {
   }
 
   return (
-    <section className="form container-xs">
+    <section className="form container-xxs">
       <Heading
         heading="Imate pitanja za nas?"
         p="Razgovarajte sa nama! Pitajte, sugerišite, recite šta mislite, preporučite - odgovor će vas vrlo brzo sačekati u vašem inboksu."
@@ -78,12 +78,15 @@ const Form = () => {
             <Check></Check>
           </span>
         </div>
-        <label className="form__footer-checkbox-label" for="check">
+        <label className="form__footer-checkbox-label" for="checkbox">
           Želite da čujete korisne savete i budete u toku?
         </label>
 
-        <Button txt="Pošalji" className="btn__square--red"></Button>
+        <Button txt="Pošalji" className="btn__square--red desktop">
+          Posalji
+        </Button>
       </div>
+      <Button txt="Pošalji" className="btn__square--red mobile"></Button>
     </section>
   );
 };

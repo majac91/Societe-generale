@@ -9,21 +9,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include respond(mobile) {
+      flex-direction: column;
+    }
   }
 
-  &__section3 {
-    flex: 1;
-  }
   &__section1,
   &__section2 {
     flex: 1.5;
   }
+  &__section3 {
+    flex: 1;
+  }
+
   &__section1 {
     height: 528px;
     width: 516px;
     background: url("../img/footer.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: -3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,6 +40,9 @@
     .block1 {
       display: flex;
       margin-bottom: var(--space-lg);
+      @include respond(mobile) {
+        flex-direction: column;
+      }
       &__col {
         width: 50%;
       }
@@ -44,6 +52,9 @@
       height: 68px;
       display: flex;
       flex-direction: column;
+      @include respond(mobile) {
+        flex-direction: initial;
+      }
       &__social {
         display: flex;
         &-item {
@@ -60,17 +71,26 @@
       font-size: var(--text-sm);
       color: var(--color-text);
       font-weight: 400;
+      margin-right: var(--space-sm);
     }
 
     .block3 {
       height: 33px;
       margin-top: 4rem;
       margin-left: 9rem;
+      @include respond(mobile) {
+        margin: var(--space-lg) 0;
+        margin-left: 0;
+        display: flex;
+      }
       .store1 {
         background-image: url("../img/store1.png");
       }
       .store2 {
         background-image: url("../img/store2.png");
+        @include respond(mobile) {
+          margin: 0 var(--space-sm);
+        }
       }
       .store3 {
         background-image: url("../img/store3.png");
@@ -83,10 +103,18 @@
         background-position: center;
         background-size: contain;
         margin-left: var(--space-sm);
+        @include respond(mobile) {
+          margin-left: 0;
+        }
       }
     }
   }
   &__section3 {
+    @include respond(mobile) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     &__button {
       border: none;
       background: white;
@@ -95,6 +123,9 @@
       position: relative;
       top: -7.5rem;
       left: 9rem;
+      @include respond(mobile) {
+        display: none;
+      }
       &-icon {
         background: white;
         opacity: 0.9;
@@ -127,19 +158,57 @@
     bottom: -5rem;
     background: white;
     border-top: var(--border-gray);
-
+    @include respond(mobile) {
+      bottom: -22.5rem;
+      flex-direction: column;
+      height: 316px;
+      padding-top: var(--space-lg);
+      border: none;
+    }
     &-list {
       display: flex;
       font-size: var(--text-sm);
+      @include respond(mobile) {
+        height: 100%;
+        flex-direction: column;
+        @include container-md;
+        font-size: 10px;
+      }
     }
     &-item {
       margin-right: var(--space-lg);
+      @include respond(mobile) {
+        padding: var(--space-sm) 0;
+      }
+    }
+    &-link {
+      font-size: 11px;
+      @include respond(mobile) {
+        font-size: 10px;
+      }
+    }
+    &-lang {
+      @include respond(mobile) {
+        @include container-md;
+      }
     }
     &-lang-btn {
       border: none;
       background: white;
+      font-size: 13px;
+    }
+    &-lang-divider {
       margin: 0 var(--space-sm);
-      font-size: var(--text-sm);
+    }
+  }
+
+  &__section1,
+  &__section2,
+  &__section3 {
+    @include respond(mobile) {
+      width: 100%;
+      padding-left: 0;
+      @include container-md;
     }
   }
 }

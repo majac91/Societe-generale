@@ -129,7 +129,7 @@ const Footer = () => {
           </ul>
           <div className="footer__bottom-lang">
             <button className="footer__bottom-lang-btn">ENG</button>
-            <span>|</span>
+            <span className="footer__bottom-lang-divider">|</span>
             <button className="footer__bottom-lang-btn">SRB</button>
           </div>
         </div>

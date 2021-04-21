@@ -12,9 +12,16 @@
   &__info,
   &__contact {
     display: flex;
+    align-items: center;
     font-size: var(--text-xs);
   }
-
+  &__links,
+  &__info,
+  &__contact-text {
+    @include respond(mobile) {
+      display: none;
+    }
+  }
   &__links {
     width: 290px;
   }
@@ -44,15 +51,56 @@
   align-items: center;
   height: 100%;
   margin-top: var(--space-md);
-
   &__logo {
     width: 290px;
-    z-index: 5000;
+    z-index: 1000;
 
     &-img {
       max-width: 246px;
       height: auto;
       float: right;
+      @include respond(mobile) {
+        float: left;
+      }
+    }
+  }
+  &__item {
+    @include respond(mobile) {
+      width: 100%;
+      border-top: var(--border-light-gray);
+      transform: translate(-100vw);
+    }
+    &-info {
+      display: none;
+      @include container-lg;
+      margin-top: var(--space-md);
+      margin-bottom: 0;
+      @include respond(mobile) {
+        display: block;
+        padding-bottom: var(--space-lg);
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 110px;
+        &-wrapper {
+          height: 55px;
+          width: 50%;
+          display: flex;
+        }
+      }
+    }
+    &-lang {
+      float: left;
+      border-top: none;
+      .lang {
+        margin: var(--space-sm);
+        display: flex;
+        &-divider {
+          margin: var(--space-sm);
+        }
+      }
     }
   }
   &__links {
@@ -60,6 +108,10 @@
     align-items: center;
     position: relative;
     z-index: 5000;
+    @include respond(mobile) {
+      position: absolute;
+      transform: translate(-100vw);
+    }
   }
   &__link {
     font-size: var(--text-sm);
@@ -68,17 +120,48 @@
     background: transparent;
     border: none;
     margin: 0 var(--space-md);
-    &-drowpodn-icon {
-      margin-left: var(--space-sm);
+    &:focus + span::after {
+      @include respond(mobile) {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 55px;
+        width: 4px;
+        background: var(--color-red);
+      }
     }
-  }
-  &__btns {
-    display: flex;
-    align-items: center;
-    z-index: 5000;
-
-    &-btn {
-      margin-right: var(--space-lg);
+    &-dropdown-icon {
+      margin-left: var(--space-sm);
+      transform: rotate(-180deg);
+      &.mobile {
+        display: none;
+      }
+      @include respond(mobile) {
+        &.mobile {
+          display: block;
+        }
+        &.desktop {
+          display: none;
+        }
+      }
+    }
+    &.nav__arrow {
+      position: relative;
+      width: 93%;
+      &--active {
+        transition: transform 0.5s ease;
+        .nav__link-dropdown-icon {
+          transform: rotate(-360deg);
+        }
+      }
+    }
+    @include respond(mobile) {
+      height: 55px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
   }
 }
@@ -87,26 +170,176 @@
   display: none;
   position: absolute;
   background: white;
+  @include respond(mobile) {
+    position: initial;
+    background: #252525;
+  }
   &--open {
     margin-top: var(--space-md);
     border-top: 3px solid var(--color-red);
     display: block;
-  }
-  &__heading {
-    text-transform: uppercase;
-    font-size: var(--text-sm);
-    margin: var(--space-md);
-    padding-top: var(--space-sm);
+    @include respond(mobile) {
+      border: none;
+      margin-top: 0;
+    }
   }
   &__link {
     font-size: var(--text-sm);
     color: var(--color-text);
+    &:active,
+    &:focus {
+      font-weight: 600;
+      color: black;
+    }
+    @include respond(mobile) {
+      &:active {
+        color: white;
+      }
+    }
   }
   &__item {
     margin: var(--space-md);
+    text-transform: uppercase;
+    @include respond(mobile) {
+      padding: var(--space-xs) var(--space-sm);
+      margin: var(--space-sm);
+    }
+    &:first-of-type {
+      @include respond(mobile) {
+        margin-top: 0;
+        padding-top: var(--space-md);
+      }
+    }
   }
 }
 
-.nav__search {
-  background: blue;
+//search and online banking buttons
+.nav__btns {
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  &.mobile {
+    display: none;
+    @include respond(mobile) {
+      display: block;
+    }
+  }
+  &.desktop {
+    @include respond(mobile) {
+      display: none;
+    }
+  }
+
+  &-btn {
+    margin-right: var(--space-lg);
+    @include respond(mobile) {
+      margin-right: 0;
+    }
+    .btn__rounded--red {
+      @include respond(mobile) {
+        background: inherit;
+        text-transform: uppercase;
+        padding: 0;
+        height: 100%;
+        color: var(--color-text);
+      }
+
+      .btn__icon-wrapper {
+        @include respond(mobile) {
+          background: var(--color-red);
+          position: absolute;
+          right: 0;
+          height: 100%;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+//closed mobile nav
+.nav__header-mobile,
+.nav__item-info,
+.info,
+.nav__item-lang {
+  transform: translate(-100vw);
+}
+
+.nav__header-mobile {
+  position: absolute;
+}
+
+//open mobile nav
+.nav--open {
+  .nav__links,
+  .nav__header-mobile {
+    right: 0;
+    background: linear-gradient(180deg, black, #3e3e3e);
+    width: 100%;
+  }
+  .nav__header-mobile,
+  .nav__link,
+  .nav__item,
+  .nav__links,
+  .nav__item-info,
+  .info,
+  .nav__item-lang {
+    transform: translate(0);
+  }
+  .nav__links {
+    flex-direction: column;
+    height: auto;
+    min-height: 90vh;
+    top: 100px;
+  }
+  .nav__header-mobile {
+    height: 55px;
+    background: black;
+    top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .social__list {
+      display: flex;
+      width: 50%;
+    }
+    &-btn {
+      display: flex;
+      margin-right: var(--space-sm);
+      background: transparent;
+      border: none;
+    }
+    &-icon {
+      margin-left: var(--space-md);
+    }
+  }
+}
+
+//nav buttons
+.btn__burger,
+.btn__search.mobile,
+.nav__header-mobile,
+.lang-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  @include respond(mobile) {
+    display: block;
+    z-index: 1001;
+  }
+}
+
+.btn__burger {
+  margin-bottom: 0.7rem;
+}
+
+.btn__search.mobile {
+  margin-right: var(--space-sm);
+  margin-bottom: 0.3rem;
+}
+
+.btn__search {
+  background: transparent;
+  border: none;
 }

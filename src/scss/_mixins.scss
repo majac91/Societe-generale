@@ -11,3 +11,28 @@
     }
   }
 }
+
+@mixin container-md {
+  width: 80vw;
+  margin: auto;
+}
+
+@mixin container-lg {
+  width: 90vw;
+  margin: auto;
+}
+
+@mixin container-sm {
+  width: 70vw;
+  margin: auto;
+}
+
+@mixin container-xs {
+  width: 50vw;
+  margin: auto;
+}
+
+@mixin container-xxs {
+  width: 45vw;
+  margin: auto;
+}

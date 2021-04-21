@@ -5,6 +5,9 @@
 .form {
   display: flex;
   flex-direction: column;
+  @include respond(mobile) {
+    @include container-lg;
+  }
 
   &__input {
     border-width: 0 0 2px 0;
@@ -19,6 +22,10 @@
   }
   &__label {
     margin: var(--space-md) 0;
+    font-size: var(--text-md);
+    @include respond(mobile) {
+      font-size: 15px;
+    }
   }
   &__counter {
     text-align: right;
@@ -29,11 +36,27 @@
     display: flex;
     align-items: center;
     margin-top: var(--space-md);
+    @include respond(mobile) {
+      margin-bottom: var(--space-lg);
+    }
     .btn__square--red {
       margin-left: auto;
+      @include respond(mobile) {
+        display: none;
+      }
     }
     &-checkbox {
       margin-right: var(--space-sm);
+      &-label {
+        font-size: var(--text-sm);
+      }
+    }
+  }
+  .btn__square--red.mobile {
+    display: none;
+    @include respond(mobile) {
+      display: block;
+      margin: auto;
     }
   }
 }

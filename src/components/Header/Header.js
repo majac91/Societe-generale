@@ -33,8 +33,43 @@ const Header = () => {
   };
 
   return (
-    <header className="header">
-      <Slider {...settings}>
+    <>
+      <header className="header desktop">
+        <Slider {...settings}>
+          <div className="header__slide header__slide--slide1">
+            <div className="header__slide__text container-md">
+              <TextBlock
+                heading="Stanovništvo"
+                p="Ostvarite male i velike planove vodeći računa da uštedite svoje vreme i novac. Planirajte budućnost za sebe i svoje najmilije, a mi smo tu da vam damo savete i ponudimo rešenja.Čekamo vas u vašem komšiluku ili u našoj online ekspozituri. "
+                linkTxt="Zakažite sastanak"
+                isHeroTxt={true}
+              ></TextBlock>
+            </div>
+          </div>
+          <div className="header__slide header__slide--slide2">
+            <div className="header__slide__text container-md">
+              <TextBlock
+                heading="mKeš"
+                p="Ostvarite male i velike planove vodeći računa da uštedite svoje vreme i novac. Planirajte budućnost za sebe i svoje najmilije, a mi smo tu da vam damo savete i ponudimo rešenja.Čekamo vas u vašem komšiluku ili u našoj online ekspozituri. "
+                linkTxt="Saznaj više"
+                isHeroTxt={true}
+              ></TextBlock>
+            </div>
+          </div>
+          <div className="header__slide header__slide--slide3">
+            <div className="header__slide__text container-md">
+              <TextBlock
+                heading="Obaveštenje za uvodjenje olakšica"
+                p="Ostvarite male i velike planove vodeći računa da uštedite svoje vreme i novac. Planirajte budućnost za sebe i svoje najmilije, a mi smo tu da vam damo savete i ponudimo rešenja.Čekamo vas u vašem komšiluku ili u našoj online ekspozituri. "
+                linkTxt="Saznaj više"
+                isHeroTxt={true}
+              ></TextBlock>
+            </div>
+          </div>
+        </Slider>
+      </header>
+
+      <header className="header mobile">
         <div className="header__slide header__slide--slide1">
           <div className="header__slide__text container-md">
             <TextBlock
@@ -45,28 +80,8 @@ const Header = () => {
             ></TextBlock>
           </div>
         </div>
-        <div className="header__slide header__slide--slide2">
-          <div className="header__slide__text container-md">
-            <TextBlock
-              heading="mKeš"
-              p="Ostvarite male i velike planove vodeći računa da uštedite svoje vreme i novac. Planirajte budućnost za sebe i svoje najmilije, a mi smo tu da vam damo savete i ponudimo rešenja.Čekamo vas u vašem komšiluku ili u našoj online ekspozituri. "
-              linkTxt="Saznaj više"
-              isHeroTxt={true}
-            ></TextBlock>
-          </div>
-        </div>
-        <div className="header__slide header__slide--slide3">
-          <div className="header__slide__text container-md">
-            <TextBlock
-              heading="Obaveštenje za uvodjenje olakšica"
-              p="Ostvarite male i velike planove vodeći računa da uštedite svoje vreme i novac. Planirajte budućnost za sebe i svoje najmilije, a mi smo tu da vam damo savete i ponudimo rešenja.Čekamo vas u vašem komšiluku ili u našoj online ekspozituri. "
-              linkTxt="Saznaj više"
-              isHeroTxt={true}
-            ></TextBlock>
-          </div>
-        </div>
-      </Slider>
-    </header>
+      </header>
+    </>
   );
 };
 

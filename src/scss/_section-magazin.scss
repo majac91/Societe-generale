@@ -3,17 +3,29 @@
     display: flex;
     justify-content: space-between;
     margin-top: var(--space-lg);
+    @include respond(mobile) {
+      flex-direction: column;
+    }
   }
   &__card {
     max-width: 356px;
+
+    @include respond(mobile) {
+      margin: 0;
+    }
     .text__p {
       min-height: 200px;
     }
     &-subheading {
       font-weight: 600;
+      font-size: var(--text-sm);
     }
     &-img {
       padding: var(--space-sm) 0 var(--space-md);
+      width: auto;
+      @include respond(mobile) {
+        max-width: 100%;
+      }
     }
     &-img1 {
       display: flex;
