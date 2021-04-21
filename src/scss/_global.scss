@@ -15,12 +15,13 @@ body {
   --text-scale-ratio: 1.5;
 
   /* type scale */
-  --text-xs: calc(
-    (var(--text-base-size)) / var(--text-scale-ratio) * var(--text-scale-ratio)
-  );
-  --text-sm: var(--text-base-size);
+  --text-xs: calc((var(--text-base-size)) / var(--text-scale-ratio) * 1.65);
+  --text-sm: calc(var(--text-base-size) / 0.9);
   --text-md: calc((var(--text-base-size)) * var(--text-scale-ratio));
-  --text-lg: calc((var(--text-base-size)) * var(--text-scale-ratio));
+  --text-lg: calc(
+    (var(--text-base-size)) * var(--text-scale-ratio) *
+      (var(--text-scale-ratio) / 0.96)
+  );
   --text-xl: calc(
     (var(--text-base-size)) * var(--text-scale-ratio) * var(--text-scale-ratio)
   );
@@ -49,6 +50,12 @@ body {
   /* borders */
   --border-gray: 1px solid var(--color-border);
   --border-light-gray: 1px solid var(--color-text);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  :root {
+    --text-base-size: 0.77em;
+  }
 }
 
 h2,
@@ -93,7 +100,7 @@ section {
 }
 
 .btn__rounded--red {
-  font-size: var(--font-sm);
+  font-size: var(--text-sm);
   font-weight: 600;
   background: var(--color-red);
   color: white;
@@ -107,7 +114,7 @@ section {
 }
 
 .btn__square--red {
-  font-size: var(--font-sm);
+  font-size: var(--text-sm);
   font-weight: 600;
   background: var(--color-red);
   color: white;
@@ -121,7 +128,7 @@ section {
 }
 
 .btn__rounded--white {
-  font-size: var(--font-sm);
+  font-size: var(--text-sm);
   font-weight: 600;
   color: var(--color-red);
   background: white;
@@ -142,4 +149,8 @@ section {
   position: relative;
   top: 70vh;
   height: 100%;
+  overflow: hidden;
+  @include respond(mobile) {
+    top: 60vh;
+  }
 }

@@ -17,6 +17,9 @@
       color: white;
       margin-bottom: var(--space-md);
       font-size: var(--text-xl);
+      @include respond(mobile) {
+        font-size: 22px;
+      }
     }
     &-card1 {
       background: url("../img/mapa ekspozitura.jpg");

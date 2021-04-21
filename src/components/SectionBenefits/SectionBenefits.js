@@ -58,6 +58,10 @@ const SectionBenefits = () => {
         </div>
       </section>
       <section className="benefits benefits__mobile mobile">
+        <Heading
+          heading="Izdvojili smo za vas još vrlo korisnih ponuda"
+          p="Nudimo vam spektar proizvoda i usluga koje život čine kvalitetnijim i jednostavnijim"
+        ></Heading>
         <div className="benefits__mobile-cards">
           <a className="benefits__mobile-card">
             <i className="benefits__mobile-card-icon">

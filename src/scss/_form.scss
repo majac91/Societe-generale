@@ -22,6 +22,10 @@
   }
   &__label {
     margin: var(--space-md) 0;
+    font-size: var(--text-md);
+    @include respond(mobile) {
+      font-size: 15px;
+    }
   }
   &__counter {
     text-align: right;
@@ -40,6 +44,9 @@
     }
     &-checkbox {
       margin-right: var(--space-sm);
+      &-label {
+        font-size: var(--text-sm);
+      }
     }
   }
   .btn__square--red.mobile {

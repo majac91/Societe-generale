@@ -32,6 +32,7 @@
     &-heading {
       text-transform: uppercase;
       padding-top: var(--space-lg);
+      font-size: var(--text-sm);
     }
     &-p {
       padding: var(--space-md);
@@ -49,7 +50,9 @@
       cursor: pointer;
       &-heading {
         flex: 4;
+        font-size: var(--text-sm);
         text-align: left;
+        text-transform: uppercase;
       }
       &-icon {
         flex: 1;

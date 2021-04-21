@@ -6,9 +6,13 @@
   text-align: center;
   &-caption {
     margin-top: var(--space-lg);
+    font-size: var(--text-xl);
+    @include respond(mobile) {
+      font-size: 22px;
+    }
   }
   &-p {
-    margin-top: var(--space-md);
     margin-bottom: var(--space-lg);
+    font-size: var(--text-sm);
   }
 }

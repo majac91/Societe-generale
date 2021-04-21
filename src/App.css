@@ -16,12 +16,13 @@ body {
   --text-base-size: 0.85em;
   --text-scale-ratio: 1.5;
   /* type scale */
-  --text-xs: calc(
-    (var(--text-base-size)) / var(--text-scale-ratio) * var(--text-scale-ratio)
-  );
-  --text-sm: var(--text-base-size);
+  --text-xs: calc((var(--text-base-size)) / var(--text-scale-ratio) * 1.65);
+  --text-sm: calc(var(--text-base-size) / 0.9);
   --text-md: calc((var(--text-base-size)) * var(--text-scale-ratio));
-  --text-lg: calc((var(--text-base-size)) * var(--text-scale-ratio));
+  --text-lg: calc(
+    (var(--text-base-size)) * var(--text-scale-ratio) *
+      (var(--text-scale-ratio) / 0.96)
+  );
   --text-xl: calc(
     (var(--text-base-size)) * var(--text-scale-ratio) * var(--text-scale-ratio)
   );
@@ -46,6 +47,12 @@ body {
   /* borders */
   --border-gray: 1px solid var(--color-border);
   --border-light-gray: 1px solid var(--color-text);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  :root {
+    --text-base-size: 0.77em;
+  }
 }
 
 h2,
@@ -90,7 +97,7 @@ section {
 }
 
 .btn__rounded--red {
-  font-size: var(--font-sm);
+  font-size: var(--text-sm);
   font-weight: 600;
   background: var(--color-red);
   color: white;
@@ -110,7 +117,7 @@ section {
 }
 
 .btn__square--red {
-  font-size: var(--font-sm);
+  font-size: var(--text-sm);
   font-weight: 600;
   background: var(--color-red);
   color: white;
@@ -130,7 +137,7 @@ section {
 }
 
 .btn__rounded--white {
-  font-size: var(--font-sm);
+  font-size: var(--text-sm);
   font-weight: 600;
   color: var(--color-red);
   background: white;
@@ -157,6 +164,13 @@ section {
   position: relative;
   top: 70vh;
   height: 100%;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .main {
+    top: 60vh;
+  }
 }
 
 .topnav {
@@ -786,11 +800,18 @@ section {
 
 .heading-caption {
   margin-top: var(--space-lg);
+  font-size: var(--text-xl);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .heading-caption {
+    font-size: 22px;
+  }
 }
 
 .heading-p {
-  margin-top: var(--space-md);
   margin-bottom: var(--space-lg);
+  font-size: var(--text-sm);
 }
 
 .text {
@@ -813,12 +834,19 @@ section {
 }
 
 .text__heading {
-  font-size: var(--text-md);
+  font-size: var(--text-lg);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .text__heading {
+    font-size: 22px;
+  }
 }
 
 .text__p {
   line-height: 1.5;
   padding: var(--space-md) 0;
+  font-size: var(--text-sm);
 }
 
 .text__link {
@@ -846,9 +874,31 @@ section {
   color: white;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .hero__heading {
+    font-size: 34px;
+  }
+}
+
 .hero__p {
   font-size: var(--text-sm);
   color: white;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .hero__p {
+    font-size: 15px;
+  }
+}
+
+.magazin .text__heading {
+  font-size: var(--text-md);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .magazin .text__p {
+    display: none;
+  }
 }
 
 .meeting {
@@ -978,6 +1028,7 @@ section {
 .benefits__card-heading {
   text-transform: uppercase;
   padding-top: var(--space-lg);
+  font-size: var(--text-sm);
 }
 
 .benefits__card-p {
@@ -1007,7 +1058,9 @@ section {
   -webkit-box-flex: 4;
       -ms-flex: 4;
           flex: 4;
+  font-size: var(--text-sm);
   text-align: left;
+  text-transform: uppercase;
 }
 
 .benefits__mobile-card-icon {
@@ -1033,8 +1086,7 @@ section {
 }
 
 .banking {
-  height: 100%;
-  min-height: 714px;
+  height: 714px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1044,6 +1096,12 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .banking {
+    height: 604px;
+  }
 }
 
 .banking.mobile {
@@ -1073,9 +1131,15 @@ section {
   }
 }
 
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .banking__txt {
+    padding-top: var(--space-lg);
+  }
+}
+
 .banking__img {
   width: 100%;
-  max-width: 722px;
+  min-width: 722px;
   padding: var(--space-md);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1086,6 +1150,17 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .banking__img {
+    padding: 0;
+    min-width: 100%;
+  }
+}
+
+.banking__img-img {
+  width: 100%;
 }
 
 .banking__img-icon {
@@ -1178,16 +1253,30 @@ section {
   max-width: 356px;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .magazin__card {
+    margin: 0;
+  }
+}
+
 .magazin__card .text__p {
   min-height: 200px;
 }
 
 .magazin__card-subheading {
   font-weight: 600;
+  font-size: var(--text-sm);
 }
 
 .magazin__card-img {
   padding: var(--space-sm) 0 var(--space-md);
+  width: auto;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .magazin__card-img {
+    max-width: 100%;
+  }
 }
 
 .magazin__card-img1 {
@@ -1242,6 +1331,13 @@ section {
 
 .form__label {
   margin: var(--space-md) 0;
+  font-size: var(--text-md);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .form__label {
+    font-size: 15px;
+  }
 }
 
 .form__counter {
@@ -1272,6 +1368,10 @@ section {
 
 .form__footer-checkbox {
   margin-right: var(--space-sm);
+}
+
+.form__footer-checkbox-label {
+  font-size: var(--text-sm);
 }
 
 .form .btn__square--red.mobile {
@@ -1355,6 +1455,12 @@ section {
   font-size: var(--text-xl);
 }
 
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .map__card-heading {
+    font-size: 22px;
+  }
+}
+
 .map__card-card1 {
   background: url("../img/mapa ekspozitura.jpg");
 }
@@ -1390,7 +1496,18 @@ section {
   background: inherit;
   border-width: 1px 0 0 0;
   border-color: var(--color-border);
-  font-size: var(--text-md);
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .example__title {
+    width: 90vw;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: var(--space-sm);
+  }
 }
 
 .example__title-icon {
@@ -1414,6 +1531,12 @@ section {
   padding: var(--space-lg) 0;
 }
 
+.example__content-heading-title {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
 .example__content__table {
   width: auto;
   margin: auto;
@@ -1432,6 +1555,13 @@ section {
   right: 0;
   bottom: 0;
   margin: var(--space-lg) 0 var(--space-md);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: var(--text-sm);
 }
 
 .example__close-icon {
@@ -1455,7 +1585,13 @@ section {
 }
 
 .table__row-heading, .table__row-data {
-  font-size: var(--text-md);
+  font-size: 17px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .table__row-heading, .table__row-data {
+    font-size: 14px;
+  }
 }
 
 .table__row-heading {
@@ -1536,8 +1672,9 @@ section {
   height: 528px;
   width: 516px;
   background: url("../img/footer.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: -3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1762,11 +1899,21 @@ section {
   margin-right: var(--space-lg);
 }
 
+.footer__bottom-link {
+  font-size: 11px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .footer__bottom-link {
+    font-size: 10px;
+  }
+}
+
 .footer__bottom-lang-btn {
   border: none;
   background: white;
   margin: 0 var(--space-sm);
-  font-size: var(--text-sm);
+  font-size: 13px;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
