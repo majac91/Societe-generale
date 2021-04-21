@@ -50,7 +50,24 @@
   }
 }
 
+.meeting {
+  .text__heading {
+    font-size: var(--text-md);
+  }
+}
+
 .magazin {
+  .text {
+    @include respond(mobile) {
+      min-height: 100%;
+      margin-bottom: var(--space-md);
+    }
+  }
+  .text__link {
+    @include respond(mobile) {
+      padding-top: var(--space-md);
+    }
+  }
   .text__heading {
     font-size: var(--text-md);
   }

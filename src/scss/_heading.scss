@@ -4,15 +4,37 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-bottom: var(--space-md);
   &-caption {
     margin-top: var(--space-lg);
     font-size: var(--text-xl);
+    padding-bottom: var(--space-md);
     @include respond(mobile) {
       font-size: 22px;
+      margin-bottom: var(--space-sm);
     }
   }
   &-p {
     margin-bottom: var(--space-lg);
     font-size: var(--text-sm);
+  }
+}
+
+.benefits {
+  .heading {
+    @include respond(mobile) {
+      @include container-md;
+      text-align: left;
+    }
+  }
+}
+
+.magazin {
+  .heading {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    &-caption {
+      // padding-bottom: var(--space-lg);
+    }
   }
 }

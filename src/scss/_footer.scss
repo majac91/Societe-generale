@@ -71,6 +71,7 @@
       font-size: var(--text-sm);
       color: var(--color-text);
       font-weight: 400;
+      margin-right: var(--space-sm);
     }
 
     .block3 {
@@ -80,12 +81,16 @@
       @include respond(mobile) {
         margin: var(--space-lg) 0;
         margin-left: 0;
+        display: flex;
       }
       .store1 {
         background-image: url("../img/store1.png");
       }
       .store2 {
         background-image: url("../img/store2.png");
+        @include respond(mobile) {
+          margin: 0 var(--space-sm);
+        }
       }
       .store3 {
         background-image: url("../img/store3.png");
@@ -98,6 +103,9 @@
         background-position: center;
         background-size: contain;
         margin-left: var(--space-sm);
+        @include respond(mobile) {
+          margin-left: 0;
+        }
       }
     }
   }
@@ -163,10 +171,15 @@
       @include respond(mobile) {
         height: 100%;
         flex-direction: column;
+        @include container-md;
+        font-size: 10px;
       }
     }
     &-item {
       margin-right: var(--space-lg);
+      @include respond(mobile) {
+        padding: var(--space-sm) 0;
+      }
     }
     &-link {
       font-size: 11px;
@@ -174,11 +187,18 @@
         font-size: 10px;
       }
     }
+    &-lang {
+      @include respond(mobile) {
+        @include container-md;
+      }
+    }
     &-lang-btn {
       border: none;
       background: white;
-      margin: 0 var(--space-sm);
       font-size: 13px;
+    }
+    &-lang-divider {
+      margin: 0 var(--space-sm);
     }
   }
 

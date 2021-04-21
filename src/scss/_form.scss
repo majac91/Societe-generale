@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   @include respond(mobile) {
-    @include container-md;
+    @include container-lg;
   }
 
   &__input {
@@ -36,6 +36,9 @@
     display: flex;
     align-items: center;
     margin-top: var(--space-md);
+    @include respond(mobile) {
+      margin-bottom: var(--space-lg);
+    }
     .btn__square--red {
       margin-left: auto;
       @include respond(mobile) {

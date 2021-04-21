@@ -71,9 +71,11 @@
 }
 
 .table {
-  width: 90%;
-  margin: auto;
   border-collapse: collapse;
+  @include container-xxs;
+  @include respond(mobile) {
+    @include container-lg;
+  }
   &__row,
   &__caption,
   &__footer {
