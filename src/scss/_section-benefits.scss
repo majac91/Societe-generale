@@ -76,3 +76,17 @@
     display: block;
   }
 }
+
+.benefits__card-icon.mobile {
+  display: none;
+  @include respond(mobile) {
+    display: block;
+  }
+}
+
+.benefits__card-icon.desktop {
+  display: block;
+  @include respond(mobile) {
+    display: none;
+  }
+}

@@ -61,6 +61,7 @@
       float: right;
       @include respond(mobile) {
         float: left;
+        max-width: 192px;
       }
     }
   }
@@ -258,11 +259,17 @@
   }
 }
 
+.nav__header-mobile,
+.nav__links {
+  transition: transform 1s ease;
+}
+
 //closed mobile nav
 .nav__header-mobile,
 .nav__item-info,
 .info,
-.nav__item-lang {
+.nav__item-lang,
+.lang {
   transform: translate(-100vw);
 }
 
@@ -284,7 +291,8 @@
   .nav__links,
   .nav__item-info,
   .info,
-  .nav__item-lang {
+  .nav__item-lang,
+  .lang {
     transform: translate(0);
   }
   .nav__links {

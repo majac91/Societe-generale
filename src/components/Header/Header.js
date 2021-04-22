@@ -3,6 +3,7 @@ import TextBlock from "../TextBlock/TextBlock";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import slide1 from "../../img/Layer -1@2x.jpg";
 
 const Header = () => {
   var settings = {
@@ -11,25 +12,10 @@ const Header = () => {
     arrows: true,
     slidesToShow: 1,
     dots: true,
-    // autoplay: true,
+    autoplay: true,
     swipe: true,
     useCss: true,
     fade: true,
-    responsive: [
-      {
-        breakpoint: 481,
-        settings: {
-          centerPadding: "0",
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 769,
-        settings: {
-          centerPadding: "0",
-        },
-      },
-    ],
   };
 
   return (

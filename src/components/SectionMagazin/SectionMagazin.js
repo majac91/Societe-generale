@@ -15,7 +15,7 @@ const SectionMagazin = () => {
         <div className="magazin__card">
           <p className="magazin__card-subheading">ONLINE KREDIT</p>
           <div className="magazin__card-img magazin__card-img1">
-            <img src={card1img}></img>
+            <img className="magazin__card-img" src={card1img}></img>
             <span className="magazin__card-img1-icon">
               <Card1Icon></Card1Icon>
             </span>

@@ -25,13 +25,17 @@
   &__section1 {
     height: 528px;
     width: 516px;
-    background: url("../img/footer.jpg");
+    background: url("../img/footer2x.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: -3rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include respond(mobile) {
+      width: 100vw;
+      background-repeat: repeat;
+    }
   }
   &__section2 {
     flex: 2;
@@ -202,13 +206,18 @@
     }
   }
 
-  &__section1,
   &__section2,
   &__section3 {
     @include respond(mobile) {
       width: 100%;
       padding-left: 0;
       @include container-md;
+    }
+  }
+  &__section1 {
+    @include respond(mobile) {
+      width: 100vw;
+      margin: auto;
     }
   }
 }

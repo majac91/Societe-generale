@@ -1,9 +1,14 @@
 import React from "react";
 import { ReactComponent as CashIcon } from "../../SVG/03 Benefits/kes kred.svg";
+import { ReactComponent as CashIconRed } from "../../SVG/03 Benefits/kes kred-red.svg";
+
 import { ReactComponent as InsuranceIcon } from "../../SVG/03 Benefits/osiguranje.svg";
+import { ReactComponent as InsuranceIconRed } from "../../SVG/03 Benefits/osiguranje-red.svg";
+
 import { ReactComponent as RefIcon } from "../../SVG/03 Benefits/ref.svg";
 import { ReactComponent as StamIcon } from "../../SVG/03 Benefits/stam.svg";
 import { ReactComponent as DownIcon } from "../../SVG/07 Responsive/down.svg";
+
 import Heading from "../Heading/Heading";
 
 const SectionBenefits = () => {
@@ -18,6 +23,9 @@ const SectionBenefits = () => {
           <a className="benefits__card">
             <i className="benefits__card-icon">
               <CashIcon></CashIcon>
+            </i>
+            <i className="benefits__card-icon mobile">
+              <CashIconRed></CashIconRed>
             </i>
             <h3 className="benefits__card-heading">Keš krediti</h3>
             <p className="benefits__card-p">
@@ -48,6 +56,9 @@ const SectionBenefits = () => {
           <a className="benefits__card">
             <i className="benefits__card-icon">
               <InsuranceIcon></InsuranceIcon>
+            </i>
+            <i className="benefits__card-icon mobile">
+              <InsuranceIconRed></InsuranceIconRed>
             </i>
             <h3 className="benefits__card-heading">Osiguranje</h3>
             <p className="benefits__card-p">

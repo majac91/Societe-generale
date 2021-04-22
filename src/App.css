@@ -269,6 +269,7 @@ section {
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   .nav__logo-img {
     float: left;
+    max-width: 192px;
   }
 }
 
@@ -548,9 +549,18 @@ section {
 }
 
 .nav__header-mobile,
+.nav__links {
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.nav__header-mobile,
 .nav__item-info,
 .info,
-.nav__item-lang {
+.nav__item-lang,
+.lang {
   -webkit-transform: translate(-100vw);
           transform: translate(-100vw);
 }
@@ -573,7 +583,8 @@ section {
 .nav--open .nav__links,
 .nav--open .nav__item-info,
 .nav--open .info,
-.nav--open .nav__item-lang {
+.nav--open .nav__item-lang,
+.nav--open .lang {
   -webkit-transform: translate(0);
           transform: translate(0);
 }
@@ -1124,6 +1135,26 @@ section {
   }
 }
 
+.benefits__card-icon.mobile {
+  display: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .benefits__card-icon.mobile {
+    display: block;
+  }
+}
+
+.benefits__card-icon.desktop {
+  display: block;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .benefits__card-icon.desktop {
+    display: none;
+  }
+}
+
 .banking {
   height: 714px;
   display: -webkit-box;
@@ -1296,6 +1327,12 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -1306,6 +1343,18 @@ section {
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   .magazin__card {
     margin: 0;
+    max-width: 356px;
+    max-width: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -1319,7 +1368,7 @@ section {
 }
 
 .magazin__card-img {
-  padding: var(--space-sm) 0 var(--space-md);
+  padding: 0 0 var(--space-md);
   width: auto;
 }
 
@@ -1518,11 +1567,11 @@ section {
 }
 
 .map__card-card1 {
-  background: url("../img/mapa ekspozitura.jpg");
+  background: url("../img/mapa ekspozitura1x.jpg");
 }
 
 .map__card-card2 {
-  background: url("../img/online ekspozitura slika@2x.jpg");
+  background: url("../img/online ekspozitura slika2x.jpg");
 }
 
 .map__card-card2 {
@@ -1734,7 +1783,7 @@ section {
 .footer__section1 {
   height: 528px;
   width: 516px;
-  background: url("../img/footer.jpg");
+  background: url("../img/footer2x.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: -3rem;
@@ -1747,6 +1796,13 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .footer__section1 {
+    width: 100vw;
+    background-repeat: repeat;
+  }
 }
 
 .footer__section2 {
@@ -2015,10 +2071,17 @@ section {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
-  .footer__section1, .footer__section2, .footer__section3 {
+  .footer__section2, .footer__section3 {
     width: 100%;
     padding-left: 0;
     width: 80vw;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .footer__section1 {
+    width: 100vw;
     margin: auto;
   }
 }
