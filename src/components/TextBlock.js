@@ -7,7 +7,7 @@ const TextBlock = ({ heading, p, linkTxt, link, isHeroTxt }) => {
     <div className="text hero">
       <h1 className="text__heading hero__heading">{heading}</h1>
       <p className="text__p hero__p">{p}</p>
-      <Button className="btn__rounded--white" txt={linkTxt} />
+      <Button className="btn__rounded--white">{linkTxt}</Button>
     </div>
   ) : (
     <div className="text">

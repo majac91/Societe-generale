@@ -55,7 +55,7 @@ const SectionBenefits = () => {
             </p>
           </a>
           <a className="benefits__card">
-            <i className="benefits__card-icon desktop">
+            <i className="benefits__card-icon">
               <InsuranceIcon></InsuranceIcon>
             </i>
             <h3 className="benefits__card-heading">Osiguranje</h3>

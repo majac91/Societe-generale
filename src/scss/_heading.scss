@@ -33,8 +33,8 @@
   .heading {
     margin-top: var(--space-lg);
     padding-top: var(--space-lg);
-    &-caption {
-      // padding-bottom: var(--space-lg);
+    @include respond(mobile) {
+      margin-top: 0;
     }
   }
 }

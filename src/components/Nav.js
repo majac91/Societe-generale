@@ -58,11 +58,11 @@ const Nav = () => {
           <div className="topnav__info container-xs">
             <div className="topnav__item-wrapper">
               <LocationIcon className="btn__icon" />
-              <p className="topnav__item">Lokacija</p>
+              <a className="topnav__item">Lokacija</a>
             </div>
             <div className="topnav__item-wrapper">
               <CurrencyIcon className="btn__icon" />
-              <p className="topnav__item">Kursna lista</p>
+              <a className="topnav__item">Kursna lista</a>
             </div>
           </div>
           <div className="topnav__contact">
@@ -231,11 +231,15 @@ const Nav = () => {
               </li>
               <li className="info-wrapper">
                 <LocationIcon className="btn__icon" />
-                <p className="info__text">Lokacija</p>
+                <a href="" className="info__text">
+                  Lokacija
+                </a>
               </li>
               <li className="info-wrapper">
                 <CurrencyIcon className="btn__icon" />
-                <p className="info__text">Kursna lista</p>
+                <a href="" className="info__text">
+                  Kursna lista
+                </a>
               </li>
             </ul>
           </li>

@@ -65,6 +65,7 @@ h3 {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 button {
@@ -77,6 +78,9 @@ li {
 
 section {
   padding-bottom: var(--space-xl);
+  @include respond(mobile) {
+    padding-bottom: 0;
+  }
 }
 
 .container-lg {

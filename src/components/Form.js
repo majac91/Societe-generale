@@ -83,10 +83,10 @@ const Form = () => {
         </label>
 
         <Button txt="Pošalji" className="btn__square--red desktop">
-          Posalji
+          Pošalji
         </Button>
       </div>
-      <Button txt="Pošalji" className="btn__square--red mobile"></Button>
+      <Button className="btn__square--red mobile">Pošalji</Button>
     </section>
   );
 };

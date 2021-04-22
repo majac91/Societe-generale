@@ -57,11 +57,9 @@
     align-items: center;
     width: 722px;
     margin-top: 15%;
-
-    // &-img1,
-    // &-img2 {
-    //   height: auto;
-    // }
+    @include respond(mobile) {
+      margin-top: 10%;
+    }
     &-img1 {
       width: 100%;
       height: auto;
@@ -72,12 +70,6 @@
         margin: auto;
       }
     }
-    // &-img2 {
-    //   width: 78%;
-    //   position: absolute;
-    //   top: 8rem;
-    //   left: 4.8rem;
-    // }
   }
 }
 

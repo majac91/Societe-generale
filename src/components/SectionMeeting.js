@@ -20,10 +20,7 @@ const SectionMeeting = () => {
               najpovoljnije rešenje za vas.
             </p>
             <div className="meeting__btn">
-              <Button
-                className="btn__square--red"
-                txt="Zakaži sastanak"
-              ></Button>
+              <Button className="btn__square--red">Zakaži sastanak</Button>
             </div>
           </div>
         </div>
@@ -44,10 +41,9 @@ const SectionMeeting = () => {
               najpovoljnije rešenje za vas.
             </p>
             <div className="meeting__btn">
-              <Button
-                className="btn__square--red"
-                txt="Zakaži sastanak"
-              ></Button>
+              <Button className="btn__square--red" txt="Zakaži sastanak">
+                Zakaži sastanak
+              </Button>
             </div>
           </div>
         </div>

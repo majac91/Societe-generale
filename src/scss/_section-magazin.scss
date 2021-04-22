@@ -29,7 +29,6 @@
     &-img {
       padding: 0 0 var(--space-md);
       width: auto;
-      // max-height: 205px;
       @include respond(mobile) {
         max-width: 100%;
       }
