@@ -1,10 +1,19 @@
 import React from "react";
-import { ReactComponent as CashIcon } from "../../SVG/03 Benefits/kes kred.svg";
-import { ReactComponent as InsuranceIcon } from "../../SVG/03 Benefits/osiguranje.svg";
-import { ReactComponent as RefIcon } from "../../SVG/03 Benefits/ref.svg";
-import { ReactComponent as StamIcon } from "../../SVG/03 Benefits/stam.svg";
-import { ReactComponent as DownIcon } from "../../SVG/07 Responsive/down.svg";
-import Heading from "../Heading/Heading";
+import { ReactComponent as CashIcon } from "../SVG/03 Benefits/kes kred.svg";
+import { ReactComponent as CashIconMobile } from "../SVG/03 Benefits/kes kred-red.svg";
+
+import { ReactComponent as InsuranceIcon } from "../SVG/03 Benefits/osiguranje.svg";
+import { ReactComponent as InsuranceIconMobile } from "../SVG/03 Benefits/osiguranje-red.svg";
+
+import { ReactComponent as RefIcon } from "../SVG/03 Benefits/ref.svg";
+import { ReactComponent as RefIconMobile } from "../SVG/03 Benefits/ref-mobile.svg";
+
+import { ReactComponent as StamIcon } from "../SVG/03 Benefits/stam.svg";
+import { ReactComponent as StamIconMobile } from "../SVG/03 Benefits/stam-mobile.svg";
+
+import { ReactComponent as DownIcon } from "../SVG/07 Responsive/down.svg";
+
+import Heading from "./Heading";
 
 const SectionBenefits = () => {
   return (
@@ -16,7 +25,7 @@ const SectionBenefits = () => {
         ></Heading>
         <div className="benefits__cards">
           <a className="benefits__card">
-            <i className="benefits__card-icon">
+            <i className="benefits__card-icon ">
               <CashIcon></CashIcon>
             </i>
             <h3 className="benefits__card-heading">Keš krediti</h3>
@@ -36,7 +45,7 @@ const SectionBenefits = () => {
             </p>
           </a>
           <a className="benefits__card">
-            <i className="benefits__card-icon">
+            <i className="benefits__card-icon ">
               <StamIcon></StamIcon>
             </i>
             <h3 className="benefits__card-heading">Stambeni krediti</h3>
@@ -46,7 +55,7 @@ const SectionBenefits = () => {
             </p>
           </a>
           <a className="benefits__card">
-            <i className="benefits__card-icon">
+            <i className="benefits__card-icon desktop">
               <InsuranceIcon></InsuranceIcon>
             </i>
             <h3 className="benefits__card-heading">Osiguranje</h3>
@@ -65,7 +74,7 @@ const SectionBenefits = () => {
         <div className="benefits__mobile-cards">
           <a className="benefits__mobile-card">
             <i className="benefits__mobile-card-icon">
-              <CashIcon></CashIcon>
+              <CashIconMobile></CashIconMobile>
             </i>
             <h3 className="benefits__mobile-card-heading">Keš krediti</h3>
             <i className="benefits__mobile-card-icon">
@@ -74,7 +83,7 @@ const SectionBenefits = () => {
           </a>
           <a className="benefits__mobile-card">
             <i className="benefits__mobile-card-icon">
-              <RefIcon></RefIcon>
+              <RefIconMobile></RefIconMobile>
             </i>
             <h3 className="benefits__mobile-card-heading">
               {" "}
@@ -86,7 +95,7 @@ const SectionBenefits = () => {
           </a>
           <a className="benefits__mobile-card">
             <i className="benefits__mobile-card-icon">
-              <StamIcon></StamIcon>
+              <StamIconMobile></StamIconMobile>
             </i>
             <h3 className="benefits__mobile-card-heading">Stambeni krediti</h3>
             <i className="benefits__mobile-card-icon">
@@ -95,7 +104,7 @@ const SectionBenefits = () => {
           </a>
           <a className="benefits__mobile-card">
             <i className="benefits__mobile-card-icon">
-              <InsuranceIcon></InsuranceIcon>
+              <InsuranceIconMobile></InsuranceIconMobile>
             </i>
             <h3 className="benefits__mobile-card-heading">Osiguranje</h3>
             <i className="benefits__mobile-card-icon">

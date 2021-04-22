@@ -5,13 +5,19 @@
     margin-top: var(--space-lg);
     @include respond(mobile) {
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
   &__card {
     max-width: 356px;
-
     @include respond(mobile) {
       margin: 0;
+      max-width: 356px;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .text__p {
       min-height: 200px;
@@ -21,8 +27,9 @@
       font-size: var(--text-sm);
     }
     &-img {
-      padding: var(--space-sm) 0 var(--space-md);
+      padding: 0 0 var(--space-md);
       width: auto;
+      // max-height: 205px;
       @include respond(mobile) {
         max-width: 100%;
       }

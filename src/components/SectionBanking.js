@@ -1,9 +1,10 @@
 import React from "react";
-import { ReactComponent as PlayIcon } from "../../SVG/00 General icons/play.svg";
-import video from "../../img/video.jpg";
-import laptop1x from "../../img/laptop1x.jpg";
-import laptop2x from "../../img/laptop2x.jpg";
-import TextBlock from "../TextBlock/TextBlock";
+import { ReactComponent as PlayIcon } from "../SVG/00 General icons/play.svg";
+import video1x from "../img/video1x.jpg";
+import video2x from "../img/video2x.jpg";
+import laptop1x from "../img/laptop1x.jpg";
+import laptop2x from "../img/laptop2x.jpg";
+import TextBlock from "./TextBlock";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -19,21 +20,21 @@ const SectionBanking = () => {
     swipe: true,
     useCss: true,
     fade: true,
-    responsive: [
-      {
-        breakpoint: 481,
-        settings: {
-          centerPadding: "0",
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 769,
-        settings: {
-          centerPadding: "0",
-        },
-      },
-    ],
+    // responsive: [
+    //   {
+    //     breakpoint: 481,
+    //     settings: {
+    //       centerPadding: "0",
+    //       slidesToShow: 1,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 769,
+    //     settings: {
+    //       centerPadding: "0",
+    //     },
+    //   },
+    // ],
   };
 
   return (
@@ -41,7 +42,11 @@ const SectionBanking = () => {
       <section className="banking m-banking desktop">
         <div className="banking__inner container-md">
           <div className="banking__img">
-            <img className="banking__img-img" src={video} />
+            <img
+              className="banking__img-img"
+              src={video1x}
+              srcSet={`${video1x} 1x, ${video2x} 2x`}
+            />
             <div className="banking__img-icon">
               <PlayIcon></PlayIcon>
             </div>
@@ -65,7 +70,11 @@ const SectionBanking = () => {
             ></TextBlock>
           </div>
           <div className="banking__img">
-            <img className="banking__img-img" src={video} />
+            <img
+              className="banking__img-img"
+              src={video1x}
+              srcSet={`${video1x} 1x, ${video2x} 2x`}
+            />{" "}
             <div className="banking__img-icon">
               <PlayIcon></PlayIcon>
             </div>

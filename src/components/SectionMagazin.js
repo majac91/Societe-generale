@@ -1,11 +1,11 @@
 import React from "react";
-import Heading from "../Heading/Heading";
-import TextBlock from "../../components/TextBlock/TextBlock";
+import Heading from "./Heading";
+import TextBlock from "./TextBlock";
 
-import card1img from "../../img/red overlay.jpg";
-import card2img from "../../img/magazin 2.jpg";
-import card3img from "../../img/magazin 3.jpg";
-import { ReactComponent as Card1Icon } from "../../SVG/00 General icons/Link.svg";
+import card1img from "../img/red overlay.jpg";
+import card2img from "../img/magazin 2.jpg";
+import card3img from "../img/magazin 3.jpg";
+import { ReactComponent as Card1Icon } from "../SVG/00 General icons/Link.svg";
 
 const SectionMagazin = () => {
   return (
@@ -15,7 +15,7 @@ const SectionMagazin = () => {
         <div className="magazin__card">
           <p className="magazin__card-subheading">ONLINE KREDIT</p>
           <div className="magazin__card-img magazin__card-img1">
-            <img src={card1img}></img>
+            <img className="magazin__card-img" src={card1img}></img>
             <span className="magazin__card-img1-icon">
               <Card1Icon></Card1Icon>
             </span>

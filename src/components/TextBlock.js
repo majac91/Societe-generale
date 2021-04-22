@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../Button/Button";
-import { ReactComponent as ArrowIcon } from "../../SVG/00 General icons/CTA arrow.svg";
+import Button from "./Button";
+import { ReactComponent as ArrowIcon } from "../SVG/00 General icons/CTA arrow.svg";
 
 const TextBlock = ({ heading, p, linkTxt, link, isHeroTxt }) => {
   return isHeroTxt === true ? (

@@ -1,5 +1,5 @@
 import React from "react";
-import TextBlock from "../TextBlock/TextBlock";
+import TextBlock from "./TextBlock";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -11,25 +11,10 @@ const Header = () => {
     arrows: true,
     slidesToShow: 1,
     dots: true,
-    // autoplay: true,
+    autoplay: true,
     swipe: true,
     useCss: true,
     fade: true,
-    responsive: [
-      {
-        breakpoint: 481,
-        settings: {
-          centerPadding: "0",
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 769,
-        settings: {
-          centerPadding: "0",
-        },
-      },
-    ],
   };
 
   return (

@@ -64,15 +64,3 @@
     }
   }
 }
-
-.benefits.desktop {
-  @include respond(mobile) {
-    display: none;
-  }
-}
-
-.benefits.mobile {
-  @include respond(mobile) {
-    display: block;
-  }
-}

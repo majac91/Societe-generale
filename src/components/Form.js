@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Heading from "../Heading/Heading";
-import Button from "../Button/Button";
-import { ReactComponent as Check } from "../../SVG/05 Ebanking primer/check.svg";
+import Heading from "./Heading";
+import Button from "./Button";
+import { ReactComponent as Check } from "../SVG/05 Ebanking primer/check.svg";
 
 const Form = () => {
   const [charCount, setCharCount] = useState({ input: 0, textarea: 0 });
@@ -78,7 +78,7 @@ const Form = () => {
             <Check></Check>
           </span>
         </div>
-        <label className="form__footer-checkbox-label" for="checkbox">
+        <label className="form__footer-checkbox-label" htmlFor="checkbox">
           Želite da čujete korisne savete i budete u toku?
         </label>
 
