@@ -37,6 +37,12 @@
   transform: translateX(-50%);
 }
 
+.slick-slider .slick-dots li,
+.slick-slider .slick-dots li button {
+  width: 11px;
+  height: 11px;
+}
+
 .slick-dots li button {
   font-size: 0;
   width: 11px;
@@ -46,13 +52,16 @@
   border-radius: 50%;
 }
 
-.slick-slider .slick-dots li {
+.slick-slider .slick-dots li,
+.slick-dots li button {
   cursor: pointer;
   display: inline-block;
   margin: 0 5px;
   background-color: #e6e6e6;
   border-radius: 50%;
   border-color: #707070;
+  width: 11px;
+  height: 11px;
 }
 
 .slick-slider .slick-dots li button::before {
