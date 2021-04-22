@@ -1,9 +1,8 @@
 import React from "react";
-import TextBlock from "../TextBlock/TextBlock";
+import TextBlock from "./TextBlock";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import slide1 from "../../img/Layer -1@2x.jpg";
 
 const Header = () => {
   var settings = {

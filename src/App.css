@@ -1123,38 +1123,6 @@ section {
   padding: var(--space-sm);
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
-  .benefits.desktop {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 320px) and (max-width: 768px) {
-  .benefits.mobile {
-    display: block;
-  }
-}
-
-.benefits__card-icon.mobile {
-  display: none;
-}
-
-@media only screen and (min-width: 320px) and (max-width: 768px) {
-  .benefits__card-icon.mobile {
-    display: block;
-  }
-}
-
-.benefits__card-icon.desktop {
-  display: block;
-}
-
-@media only screen and (min-width: 320px) and (max-width: 768px) {
-  .benefits__card-icon.desktop {
-    display: none;
-  }
-}
-
 .banking {
   height: 714px;
   display: -webkit-box;
