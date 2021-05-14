@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import logo from "../img/Layer 3 copy@2x.png";
-import { ReactComponent as OnlineBankingIcon } from "../SVG/07 Responsive/online banking.svg";
-import { ReactComponent as DropdownIcon } from "../SVG/01 Nav/dropdown arrow.svg";
-import { ReactComponent as SearchIcon } from "../SVG/01 Nav/search.svg";
-import { ReactComponent as FacebookIcon } from "../SVG/01 Nav/facebook.svg";
-import { ReactComponent as InstagramIcon } from "../SVG/01 Nav/instagram.svg";
-import { ReactComponent as TwitterIcon } from "../SVG/01 Nav/twitter.svg";
-import { ReactComponent as LikedinIcon } from "../SVG/01 Nav/linkedin.svg";
-import { ReactComponent as LocationIcon } from "../SVG/01 Nav/location.svg";
-import { ReactComponent as CurrencyIcon } from "../SVG/01 Nav/kurs.svg";
-import { ReactComponent as ContactIcon } from "../SVG/01 Nav/podrska.svg";
-import { ReactComponent as Menu } from "../SVG/07 Responsive/menu.svg";
-import { ReactComponent as CloseIcon } from "../SVG/07 Responsive/close menu.svg";
-import { ReactComponent as ArrowIcon } from "../SVG/07 Responsive/arrow dropdown.svg";
+import logo from "../../img/Layer 3 copy@2x.png";
+import { ReactComponent as OnlineBankingIcon } from "../../SVG/07 Responsive/online banking.svg";
+import { ReactComponent as DropdownIcon } from "../../SVG/01 Nav/dropdown arrow.svg";
+import { ReactComponent as SearchIcon } from "../../SVG/01 Nav/search.svg";
+import { ReactComponent as FacebookIcon } from "../../SVG/01 Nav/facebook.svg";
+import { ReactComponent as InstagramIcon } from "../../SVG/01 Nav/instagram.svg";
+import { ReactComponent as TwitterIcon } from "../../SVG/01 Nav/twitter.svg";
+import { ReactComponent as LikedinIcon } from "../../SVG/01 Nav/linkedin.svg";
+import { ReactComponent as LocationIcon } from "../../SVG/01 Nav/location.svg";
+import { ReactComponent as CurrencyIcon } from "../../SVG/01 Nav/kurs.svg";
+import { ReactComponent as ContactIcon } from "../../SVG/01 Nav/podrska.svg";
+import { ReactComponent as Menu } from "../../SVG/07 Responsive/menu.svg";
+import { ReactComponent as CloseIcon } from "../../SVG/07 Responsive/close menu.svg";
+import { ReactComponent as ArrowIcon } from "../../SVG/07 Responsive/arrow dropdown.svg";
 
 const cx = require("classnames");
 

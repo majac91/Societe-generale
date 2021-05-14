@@ -1,19 +1,19 @@
 import React from "react";
-import { ReactComponent as CashIcon } from "../SVG/03 Benefits/kes kred.svg";
-import { ReactComponent as CashIconMobile } from "../SVG/03 Benefits/kes kred-red.svg";
+import { ReactComponent as CashIcon } from "../../SVG/03 Benefits/kes kred.svg";
+import { ReactComponent as CashIconMobile } from "../../SVG/03 Benefits/kes kred-red.svg";
 
-import { ReactComponent as InsuranceIcon } from "../SVG/03 Benefits/osiguranje.svg";
-import { ReactComponent as InsuranceIconMobile } from "../SVG/03 Benefits/osiguranje-red.svg";
+import { ReactComponent as InsuranceIcon } from "../../SVG/03 Benefits/osiguranje.svg";
+import { ReactComponent as InsuranceIconMobile } from "../../SVG/03 Benefits/osiguranje-red.svg";
 
-import { ReactComponent as RefIcon } from "../SVG/03 Benefits/ref.svg";
-import { ReactComponent as RefIconMobile } from "../SVG/03 Benefits/ref-mobile.svg";
+import { ReactComponent as RefIcon } from "../../SVG/03 Benefits/ref.svg";
+import { ReactComponent as RefIconMobile } from "../../SVG/03 Benefits/ref-mobile.svg";
 
-import { ReactComponent as StamIcon } from "../SVG/03 Benefits/stam.svg";
-import { ReactComponent as StamIconMobile } from "../SVG/03 Benefits/stam-mobile.svg";
+import { ReactComponent as StamIcon } from "../../SVG/03 Benefits/stam.svg";
+import { ReactComponent as StamIconMobile } from "../../SVG/03 Benefits/stam-mobile.svg";
 
-import { ReactComponent as DownIcon } from "../SVG/07 Responsive/down.svg";
+import { ReactComponent as DownIcon } from "../../SVG/07 Responsive/down.svg";
 
-import Heading from "./Heading";
+import Heading from "../Heading/Heading";
 
 const SectionBenefits = () => {
   return (

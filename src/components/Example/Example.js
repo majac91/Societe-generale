@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { ReactComponent as ArrowIcon } from "../SVG/05 Ebanking primer/dropdown.svg";
-import { ReactComponent as CloseIcon } from "../SVG/05 Ebanking primer/X.svg";
+import { ReactComponent as ArrowIcon } from "../../SVG/05 Ebanking primer/dropdown.svg";
+import { ReactComponent as CloseIcon } from "../../SVG/05 Ebanking primer/X.svg";
 const cx = require("classnames");
 const Example = () => {
   const [isExample1Open, setIsExample1Open] = useState(false);

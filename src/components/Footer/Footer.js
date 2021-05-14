@@ -1,12 +1,12 @@
 import React from "react";
-import TextBlock from "./TextBlock";
+import TextBlock from "../TextBlock/TextBlock";
 
-import { ReactComponent as FacebookIcon } from "../SVG/01 Nav/facebook.svg";
-import { ReactComponent as InstagramIcon } from "../SVG/01 Nav/instagram.svg";
-import { ReactComponent as TwitterIcon } from "../SVG/01 Nav/twitter.svg";
-import { ReactComponent as LikedinIcon } from "../SVG/01 Nav/linkedin.svg";
-import { ReactComponent as ArrowIcon } from "../SVG/06 Footer/back to top.svg";
-import phone from "../img/telefon.png";
+import { ReactComponent as FacebookIcon } from "../../SVG/01 Nav/facebook.svg";
+import { ReactComponent as InstagramIcon } from "../../SVG/01 Nav/instagram.svg";
+import { ReactComponent as TwitterIcon } from "../../SVG/01 Nav/twitter.svg";
+import { ReactComponent as LikedinIcon } from "../../SVG/01 Nav/linkedin.svg";
+import { ReactComponent as ArrowIcon } from "../../SVG/06 Footer/back to top.svg";
+import phone from "../../img/telefon.png";
 
 const Footer = () => {
   return (

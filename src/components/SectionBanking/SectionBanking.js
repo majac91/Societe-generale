@@ -1,10 +1,10 @@
 import React from "react";
-import { ReactComponent as PlayIcon } from "../SVG/00 General icons/play.svg";
-import video1x from "../img/video1x.jpg";
-import video2x from "../img/video2x.jpg";
-import laptop1x from "../img/laptop1x.jpg";
-import laptop2x from "../img/laptop2x.jpg";
-import TextBlock from "./TextBlock";
+import { ReactComponent as PlayIcon } from "../../SVG/00 General icons/play.svg";
+import video1x from "../../img/video1x.jpg";
+import video2x from "../../img/video2x.jpg";
+import laptop1x from "../../img/laptop1x.jpg";
+import laptop2x from "../../img/laptop2x.jpg";
+import TextBlock from "../TextBlock/TextBlock";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,25 +16,10 @@ const SectionBanking = () => {
     arrows: true,
     slidesToShow: 1,
     dots: true,
-    // autoplay: true,
+    autoplay: true,
     swipe: true,
     useCss: true,
     fade: true,
-    // responsive: [
-    //   {
-    //     breakpoint: 481,
-    //     settings: {
-    //       centerPadding: "0",
-    //       slidesToShow: 1,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 769,
-    //     settings: {
-    //       centerPadding: "0",
-    //     },
-    //   },
-    // ],
   };
 
   return (

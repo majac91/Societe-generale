@@ -1,6 +1,6 @@
 import React from "react";
-import TextBlock from "./TextBlock";
-import Button from "./Button";
+import TextBlock from "../TextBlock/TextBlock";
+import Button from "../Button/Button";
 
 const SectionMeeting = () => {
   return (

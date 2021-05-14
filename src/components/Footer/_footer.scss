@@ -28,7 +28,7 @@
   &__section1 {
     height: 528px;
     width: 516px;
-    background: url("../img/footer2x.jpg");
+    background: url("../../img/footer2x.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: -3rem;
@@ -94,16 +94,16 @@
         display: flex;
       }
       .store1 {
-        background-image: url("../img/store1.png");
+        background-image: url("../../img/store1.png");
       }
       .store2 {
-        background-image: url("../img/store2.png");
+        background-image: url("../../img/store2.png");
         @include respond(mobile) {
           margin: 0 var(--space-sm);
         }
       }
       .store3 {
-        background-image: url("../img/store3.png");
+        background-image: url("../../img/store3.png");
       }
       &-store {
         width: 114px;
