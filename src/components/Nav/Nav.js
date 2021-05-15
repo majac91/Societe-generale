@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useWindowSize } from "../../hooks/useWindowSize";
 import logo from "../../img/Layer 3 copy@2x.png";
 import { ReactComponent as OnlineBankingIcon } from "../../SVG/07 Responsive/online banking.svg";
 import { ReactComponent as DropdownIcon } from "../../SVG/01 Nav/dropdown arrow.svg";
@@ -19,6 +20,17 @@ const cx = require("classnames");
 const Nav = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  const windowSize = useWindowSize();
+
+  useEffect(() => {
+    if (windowSize.width < 1201) {
+      setIsSmallScreen(true);
+    } else {
+      setIsSmallScreen(false);
+    }
+  }, [windowSize]);
 
   function toggleDrowdown() {
     setIsDropdownOpen((prev) => !prev);
@@ -86,177 +98,181 @@ const Nav = () => {
       </div>
 
       <nav
-        className={`nav container-lg  ${cx({
+        className={`nav container-lg ${cx({
           ["nav--open"]: isBurgerOpen,
+          ["mobile"]: isSmallScreen,
         })}`}
       >
         <a className="nav__logo" href="">
           <img src={logo} className="nav__logo-img" alt="" />
         </a>
-        <button className="btn__search mobile">
-          <SearchIcon className="btn__icon"></SearchIcon>
-        </button>
-        <button onClick={toggleBurger} className="btn__burger">
-          <Menu className="btn__icon"></Menu>
-        </button>
-
-        <div className="nav__header-mobile">
-          <ul className="social__list">
-            <li className="social__item">
-              <a href="">
-                <InstagramIcon className="btn__icon" />
-              </a>
-            </li>
-            <li className="social__item">
-              <a href="">
-                <TwitterIcon className="btn__icon" />
-              </a>
-            </li>
-            <li className="social__item">
-              <a href="">
-                <FacebookIcon className="btn__icon" />
-              </a>
-            </li>
-            <li className="social__item">
-              <a href="">
-                <LikedinIcon className="btn__icon" />
-              </a>
-            </li>
-          </ul>
-          <button onClick={toggleBurger} className="nav__header-mobile-btn">
-            Close
-            <span className="nav__header-mobile-icon">
-              <CloseIcon></CloseIcon>
-            </span>
+        <div className="nav__btns-wrapper mobile">
+          <button className="btn__search mobile">
+            <SearchIcon className="btn__icon"></SearchIcon>
+          </button>
+          <button onClick={toggleBurger} className="btn__burger">
+            <Menu className="btn__icon"></Menu>
           </button>
         </div>
-
-        <ul className="nav__links container-xs">
-          <li className="nav__item">
-            <button
-              className={`nav__link nav__arrow ${cx({
-                "nav__arrow--active": isDropdownOpen,
-              })}`}
-              onClick={toggleDrowdown}
-            >
-              Stanovništvo
-              <span className="nav__link-dropdown-icon desktop">
-                <DropdownIcon />
-              </span>
-              <span className="nav__link-dropdown-icon mobile example__title-icon">
-                <ArrowIcon />
+        <div className="nav__inner-wrapper">
+          <div className="nav__header-mobile">
+            <ul className="social__list">
+              <li className="social__item">
+                <a href="">
+                  <InstagramIcon className="btn__icon" />
+                </a>
+              </li>
+              <li className="social__item">
+                <a href="">
+                  <TwitterIcon className="btn__icon" />
+                </a>
+              </li>
+              <li className="social__item">
+                <a href="">
+                  <FacebookIcon className="btn__icon" />
+                </a>
+              </li>
+              <li className="social__item">
+                <a href="">
+                  <LikedinIcon className="btn__icon" />
+                </a>
+              </li>
+            </ul>
+            <button onClick={toggleBurger} className="nav__header-mobile-btn">
+              Close
+              <span className="nav__header-mobile-icon">
+                <CloseIcon></CloseIcon>
               </span>
             </button>
-            <span></span>
-            <ul
-              className={`dropdown ${cx({
-                ["dropdown--open"]: isDropdownOpen,
-              })}`}
-            >
-              <li className="dropdown__item">
-                <a className="dropdown__link" href="">
-                  Krediti
-                </a>
-              </li>
-              <li className="dropdown__item">
-                <a className="dropdown__link" href="">
-                  Keš krediti
-                </a>
-              </li>
-              <li className="dropdown__item">
-                <a className="dropdown__link" href="">
-                  Kredti za refinansiranje
-                </a>
-              </li>
-              <li className="dropdown__item">
-                <a className="dropdown__link" href="">
-                  Stambeni krediti
-                </a>
-              </li>
-              <li className="dropdown__item">
-                <a className="dropdown__link" href="">
-                  Auto krediti
-                </a>
-              </li>
-              <li className="dropdown__item">
-                <a className="dropdown__link" href="">
-                  Auto krediti
-                </a>
-              </li>
-              <li className="dropdown__item">
-                <a className="dropdown__link" href="">
-                  Evergrin krediti za penzionere
-                </a>
-              </li>
-              <li className="dropdown__item">
-                <a className="dropdown__link" href="">
-                  Fluo krediti za studente
-                </a>
-              </li>
-              <li className="dropdown__item">
-                <a className="dropdown__link" href="">
-                  Potrosacki krediti
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li className="nav__item">
-            <a className="nav__link" href="">
-              Mali biznis
-            </a>
-          </li>
-          <li className="nav__item">
-            <a className="nav__link" href="">
-              Privreda
-            </a>
-          </li>
-          <li className="nav__item">
-            <a className="nav__link" href="">
-              Privatno bankarstvo
-            </a>
-          </li>
-          <li className="nav__item">
-            <a className="nav__link" href="">
-              Magazin
-            </a>
-          </li>
+          </div>
 
-          <li className="nav__item-info">
-            <ul className="info">
-              <li className="info-wrapper">
-                <p className="info__text">O nama</p>
-              </li>
-              <li className="info-wrapper">
-                <p className="info__text">Kontakt</p>
-              </li>
-              <li className="info-wrapper">
-                <LocationIcon className="btn__icon" />
-                <a href="" className="info__text">
-                  Lokacija
-                </a>
-              </li>
-              <li className="info-wrapper">
-                <CurrencyIcon className="btn__icon" />
-                <a href="" className="info__text">
-                  Kursna lista
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li className="nav__item nav__item-lang">
-            <ul className="lang">
-              <li>
-                <button className="lang-btn">
-                  ENG
-                  <span className="lang-divider">|</span>
-                </button>
-              </li>
-              <li>
-                <button className="lang-btn">SRB</button>
-              </li>
-            </ul>
-          </li>
-        </ul>
+          <ul className="nav__links container-xs">
+            <li className="nav__item">
+              <button
+                className={`nav__link nav__arrow ${cx({
+                  "nav__arrow--active": isDropdownOpen,
+                })}`}
+                onClick={toggleDrowdown}
+              >
+                Stanovništvo
+                <span className="nav__link-dropdown-icon desktop">
+                  <DropdownIcon />
+                </span>
+                <span className="nav__link-dropdown-icon mobile example__title-icon">
+                  <ArrowIcon />
+                </span>
+              </button>
+              <span></span>
+              <ul
+                className={`dropdown ${cx({
+                  ["dropdown--open"]: isDropdownOpen,
+                })}`}
+              >
+                <li className="dropdown__item">
+                  <a className="dropdown__link" href="">
+                    Krediti
+                  </a>
+                </li>
+                <li className="dropdown__item">
+                  <a className="dropdown__link" href="">
+                    Keš krediti
+                  </a>
+                </li>
+                <li className="dropdown__item">
+                  <a className="dropdown__link" href="">
+                    Kredti za refinansiranje
+                  </a>
+                </li>
+                <li className="dropdown__item">
+                  <a className="dropdown__link" href="">
+                    Stambeni krediti
+                  </a>
+                </li>
+                <li className="dropdown__item">
+                  <a className="dropdown__link" href="">
+                    Auto krediti
+                  </a>
+                </li>
+                <li className="dropdown__item">
+                  <a className="dropdown__link" href="">
+                    Auto krediti
+                  </a>
+                </li>
+                <li className="dropdown__item">
+                  <a className="dropdown__link" href="">
+                    Evergrin krediti za penzionere
+                  </a>
+                </li>
+                <li className="dropdown__item">
+                  <a className="dropdown__link" href="">
+                    Fluo krediti za studente
+                  </a>
+                </li>
+                <li className="dropdown__item">
+                  <a className="dropdown__link" href="">
+                    Potrosacki krediti
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li className="nav__item">
+              <a className="nav__link" href="">
+                Mali biznis
+              </a>
+            </li>
+            <li className="nav__item">
+              <a className="nav__link" href="">
+                Privreda
+              </a>
+            </li>
+            <li className="nav__item">
+              <a className="nav__link" href="">
+                Privatno bankarstvo
+              </a>
+            </li>
+            <li className="nav__item">
+              <a className="nav__link" href="">
+                Magazin
+              </a>
+            </li>
+
+            <li className="nav__item-info">
+              <ul className="info">
+                <li className="info-wrapper">
+                  <p className="info__text">O nama</p>
+                </li>
+                <li className="info-wrapper">
+                  <p className="info__text">Kontakt</p>
+                </li>
+                <li className="info-wrapper">
+                  <LocationIcon className="btn__icon" />
+                  <a href="" className="info__text">
+                    Lokacija
+                  </a>
+                </li>
+                <li className="info-wrapper">
+                  <CurrencyIcon className="btn__icon" />
+                  <a href="" className="info__text">
+                    Kursna lista
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li className="nav__item nav__item-lang">
+              <ul className="lang">
+                <li>
+                  <button className="lang-btn">
+                    ENG
+                    <span className="lang-divider">|</span>
+                  </button>
+                </li>
+                <li>
+                  <button className="lang-btn">SRB</button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
 
         <div className="nav__btns desktop">
           <div className="nav__btns-btn">
