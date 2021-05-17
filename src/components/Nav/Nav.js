@@ -99,15 +99,17 @@ const Nav = () => {
 
       <nav
         className={`nav container-lg ${cx({
-          ["nav--open"]: isBurgerOpen,
+          ["burger--open"]: isBurgerOpen,
           ["mobile"]: isSmallScreen,
+          ["no-overflow"]: !isBurgerOpen,
         })}`}
       >
         <a className="nav__logo" href="">
           <img src={logo} className="nav__logo-img" alt="" />
         </a>
-        <div className="nav__btns-wrapper mobile">
-          <button className="btn__search mobile">
+
+        <div className="nav__btns-wrapper">
+          <button className="btn__search">
             <SearchIcon className="btn__icon"></SearchIcon>
           </button>
           <button onClick={toggleBurger} className="btn__burger">

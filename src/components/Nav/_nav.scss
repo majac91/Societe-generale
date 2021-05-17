@@ -84,11 +84,11 @@
       display: none;
       @include respond(mobile) {
         display: block;
-        padding-bottom: var(--space-lg);
+        margin-bottom: var(--space-lg);
       }
       @include respond(tablet) {
         display: block;
-        padding-bottom: var(--space-lg);
+        margin-bottom: var(--space-lg);
       }
       .info {
         display: flex;
@@ -128,12 +128,10 @@
     @include respond(mobile) {
       position: absolute;
       top: 0;
-      // transform: translate(-100vw);
     }
     @include respond(tablet) {
       position: absolute;
       top: 0;
-      // transform: translate(-100vw);
     }
   }
   &__link {
@@ -232,10 +230,11 @@
     background: #252525;
   }
   &--open {
+    height: auto;
+    display: block;
+    animation: showDropdown 250ms ease-in-out both;
     margin-top: var(--space-md);
     border-top: 3px solid var(--color-red);
-    display: block;
-
     @include respond(mobile) {
       border: none;
       margin-top: 0;
@@ -356,36 +355,36 @@
   position: absolute;
 }
 
-.nav__inner-wrapper {
-  // position: relative;
-  // left: -300vw;
-  transition: position 1s ease;
-}
+.mobile {
+  overflow: hidden;
 
-//open mobile nav
-.nav--open {
   .nav__inner-wrapper {
+    background: linear-gradient(180deg, black, #535252);
+    height: 100vh;
+    width: 100vw;
+    margin-left: -2.5vw;
+    margin-top: -1.5rem;
     position: absolute;
-    left: 0;
+    transition: left 0.5s ease-in-out;
+    left: 100vw;
+    top: 0;
   }
   .nav__links,
   .nav__header-mobile {
-    // right: 0;
     background: linear-gradient(180deg, black, #3e3e3e);
     width: 100vw;
-    margin-left: -2.5vw;
-    margin-top: -1.9rem;
   }
   .nav__links {
     flex-direction: column;
     height: auto;
-    min-height: 90vh;
-    top: 100px;
+    top: 3.4rem;
+  }
+  .nav__link {
+    padding: 1rem;
   }
   .nav__header-mobile {
     height: 55px;
     background: black;
-    top: 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -405,9 +404,37 @@
   }
 }
 
-//nav buttons
+//open mobile nav
+.burger--open {
+  .nav__inner-wrapper {
+    background: linear-gradient(180deg, black, #535252);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+  }
+}
+
+//TO DO - refactor
+.burger--open.mobile {
+  overflow: visible;
+}
+
+.no-overflow {
+  animation: 1.5s delay-overflow;
+}
+@keyframes delay-overflow {
+  from {
+    overflow: visible;
+  }
+  to {
+    overflow: hidden;
+  }
+}
+
+//mobile nav buttons
 .btn__burger,
-.btn__search.mobile,
+.mobile .btn__search,
 .nav__header-mobile,
 .lang-btn {
   display: none;
@@ -423,7 +450,7 @@
   margin-bottom: 0.7rem;
 }
 
-.btn__search.mobile {
+.mobile .btn__search {
   margin-right: var(--space-sm);
   margin-bottom: 0.3rem;
 }
@@ -431,4 +458,13 @@
 .btn__search {
   background: transparent;
   border: none;
+}
+
+@keyframes showDropdown {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
