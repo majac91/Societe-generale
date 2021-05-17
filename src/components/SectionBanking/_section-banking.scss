@@ -19,8 +19,12 @@
     @include respond(mobile) {
       flex-direction: column;
     }
+    // @include respond(tablet) {
+    // }
   }
   &__txt {
+    min-width: 350px;
+    max-width: 500px;
     @include respond(mobile) {
       padding-top: var(--space-lg);
     }

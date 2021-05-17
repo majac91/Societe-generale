@@ -115,6 +115,7 @@
       .lang {
         margin: var(--space-sm);
         display: flex;
+        align-items: center;
         &-divider {
           margin: var(--space-sm);
         }
@@ -232,7 +233,7 @@
   &--open {
     height: auto;
     display: block;
-    animation: showDropdown 250ms ease-in-out both;
+    animation: showDropdown 350ms ease-in-out both;
     margin-top: var(--space-md);
     border-top: 3px solid var(--color-red);
     @include respond(mobile) {
@@ -247,8 +248,8 @@
   &__link {
     font-size: var(--text-sm);
     color: var(--color-text);
-    &:active,
-    &:focus {
+
+    &:hover {
       font-weight: 600;
       color: black;
     }
@@ -362,9 +363,7 @@
     background: linear-gradient(180deg, black, #535252);
     height: 100vh;
     width: 100vw;
-    margin-left: -2.5vw;
-    margin-top: -1.5rem;
-    position: absolute;
+    position: fixed;
     transition: left 0.5s ease-in-out;
     left: 100vw;
     top: 0;
@@ -410,8 +409,10 @@
     background: linear-gradient(180deg, black, #535252);
     height: 100vh;
     width: 100vw;
-    position: absolute;
+    position: fixed;
     left: 0;
+    top: 0;
+    overflow: auto;
   }
 }
 
@@ -433,21 +434,26 @@
 }
 
 //mobile nav buttons
-.btn__burger,
-.mobile .btn__search,
+.nav__btns-wrapper,
 .nav__header-mobile,
 .lang-btn {
   display: none;
   background: transparent;
   border: none;
   @include respond(mobile) {
-    display: block;
-    z-index: 1001;
+    display: flex;
+    align-items: center;
+  }
+  @include respond(tablet) {
+    display: flex;
+    align-items: center;
   }
 }
 
 .btn__burger {
   margin-bottom: 0.7rem;
+  background: transparent;
+  border: none;
 }
 
 .mobile .btn__search {

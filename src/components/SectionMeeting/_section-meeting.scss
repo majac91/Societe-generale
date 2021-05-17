@@ -11,7 +11,10 @@
     margin: var(--space-md);
     background: var(--color-light-gray);
     height: 100%;
-    width: 481px;
+    flex: 1;
+    @include respond(tablet) {
+      width: 600px;
+    }
   }
   &__inner {
     display: flex;
