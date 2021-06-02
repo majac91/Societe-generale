@@ -21,7 +21,7 @@ const Example = () => {
             <ArrowIcon></ArrowIcon>
           </span>
         </button>
-        <div className="example__content">
+        <div className="example__content slideInDown">
           <div className="example__content-heading">
             <h3 className="example__content-heading-title">
               Stambeni kredit iz sredstava banke sa promenljivom kamatnom stopom

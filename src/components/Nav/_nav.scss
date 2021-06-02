@@ -126,14 +126,6 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    @include respond(mobile) {
-      position: absolute;
-      top: 0;
-    }
-    @include respond(tablet) {
-      position: absolute;
-      top: 0;
-    }
   }
   &__link {
     font-size: var(--text-sm);
@@ -150,7 +142,7 @@
         display: block;
         position: absolute;
         left: 0;
-        top: 0;
+        top: 55px;
         height: 55px;
         width: 4px;
         background: var(--color-red);
@@ -160,7 +152,7 @@
         display: block;
         position: absolute;
         left: 0;
-        top: 0;
+        top: 55px;
         height: 55px;
         width: 4px;
         background: var(--color-red);
@@ -352,13 +344,7 @@
   }
 }
 
-.nav__header-mobile {
-  position: absolute;
-}
-
 .mobile {
-  overflow: hidden;
-
   .nav__inner-wrapper {
     background: linear-gradient(180deg, black, #535252);
     height: 100vh;
@@ -375,8 +361,9 @@
   }
   .nav__links {
     flex-direction: column;
-    height: auto;
-    top: 3.4rem;
+    min-height: 100vh;
+    overflow: scroll;
+    justify-content: flex-start;
   }
   .nav__link {
     padding: 1rem;
@@ -399,6 +386,7 @@
     }
     &-icon {
       margin-left: var(--space-md);
+      margin-right: var(--space-sm);
     }
   }
 }
@@ -413,23 +401,6 @@
     left: 0;
     top: 0;
     overflow: auto;
-  }
-}
-
-//TO DO - refactor
-.burger--open.mobile {
-  overflow: visible;
-}
-
-.no-overflow {
-  animation: 1.5s delay-overflow;
-}
-@keyframes delay-overflow {
-  from {
-    overflow: visible;
-  }
-  to {
-    overflow: hidden;
   }
 }
 

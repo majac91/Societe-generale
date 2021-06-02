@@ -101,7 +101,6 @@ const Nav = () => {
         className={`nav container-lg ${cx({
           ["burger--open"]: isBurgerOpen,
           ["mobile"]: isSmallScreen,
-          ["no-overflow"]: !isBurgerOpen,
         })}`}
       >
         <a className="nav__logo" href="">
